@@ -1,0 +1,23 @@
+#skill .skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+
+@media (max-width: 1083px) {
+    #skill .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 693px) {
+    #skill .skills-container {
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+}
