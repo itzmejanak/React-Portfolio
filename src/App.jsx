@@ -16,8 +16,19 @@ import PDF from './Components/PDF';
 import ThemeSwitcher from './Commons/ThemeSwitcher';
 import Apps from './Components/Apps';
 
-const MainPage = () => (
+const Layout = () => (
   <div>
+    <Navbar />
+    <div className="content">
+      {/* render route-specific components here */}
+      {props.children}
+    </div>
+    <Footer />
+  </div>
+);
+
+const MainPage = () => (
+  <>
     <Hero />
     <About />
     <Skill />
@@ -25,7 +36,7 @@ const MainPage = () => (
     <Projects />
     <Testimonials />
     <Contact />
-  </div>
+  </>
 );
 
 function App() {
@@ -37,15 +48,13 @@ function App() {
   }, []);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <ThemeSwitcher />
-      <Navbar />
       <Routes>
-        <Route path="/React-Portfolio" element={<MainPage />} />
-        <Route path="/e-book" element={<PDF />} />
-        <Route path="/apps" element={<Apps />} />
+        <Route path="/" element={<Layout><MainPage /></Layout>} />
+        <Route path="/e-book" element={<Layout><PDF /></Layout>} />
+        <Route path="/apps" element={<Layout><Apps /></Layout>} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
