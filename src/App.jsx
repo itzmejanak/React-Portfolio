@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,17 +15,6 @@ import Footer from './Components/Footer';
 import PDF from './Components/PDF';
 import ThemeSwitcher from './Commons/ThemeSwitcher';
 import Apps from './Components/Apps';
-
-const Layout = () => (
-  <div>
-    <Navbar />
-    <div className="content">
-      {/* render route-specific components here */}
-      {props.children}
-    </div>
-    <Footer />
-  </div>
-);
 
 const MainPage = () => (
   <>
@@ -50,11 +39,13 @@ function App() {
   return (
     <Router>
       <ThemeSwitcher />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Layout><MainPage /></Layout>} />
-        <Route path="/e-book" element={<Layout><PDF /></Layout>} />
-        <Route path="/apps" element={<Layout><Apps /></Layout>} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/e-book" element={<PDF />} />
+        <Route path="/apps" element={<Apps />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
