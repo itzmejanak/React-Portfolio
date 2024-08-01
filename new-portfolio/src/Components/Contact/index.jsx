@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="contact-options">
           {
             contactOptions.map((option, index)=>(
-              <div className="flex-center option" data-aos="fade-right">
+              <div className="flex-center option" data-aos="fade-right" key={index}>
                 <div className="flex-center icon-wrapper">
                   {option.icon}
                 </div>

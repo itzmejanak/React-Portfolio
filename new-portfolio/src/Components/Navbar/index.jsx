@@ -10,7 +10,7 @@ const Navbar = () => {
   const [openSidebar, setOpenSide] = useState(false);
 
   return (
-    <navbar className='navbar flex'>
+    <nav className='navbar flex'>
       {openSidebar ? <div className='overlay' onClick={()=>setOpenSide(!openSidebar)}/>:''}
       <a href="/"><Logo/></a>
       <div className={`box flex-center tabs-group sidebar ${openSidebar ? 'visible':''}`}>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         </div>
       </div>
-    </navbar>
+    </nav>
   )
 }
 

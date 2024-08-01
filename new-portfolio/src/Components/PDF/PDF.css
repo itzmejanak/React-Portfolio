@@ -49,9 +49,12 @@
 }
 
 .item-img {
+    height: 200.5px; /* min height */
+    max-height: 200px; /* max height */
     position: relative;
     overflow: hidden;
-}
+  }
+
 
 /* Light Theme */
 .light_theme .filter-select {

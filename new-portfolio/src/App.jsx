@@ -14,6 +14,7 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import PDF from './Components/PDF';
 import ThemeSwitcher from './Commons/ThemeSwitcher';
+import Apps from './Components/Apps';
 
 const MainPage = () => (
   <>
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/e-book" element={<PDF />} />
+        <Route path="/apps" element={<Apps />} />
       </Routes>
       <Footer />
     </Router>

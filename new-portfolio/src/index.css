@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --bg-primary: #070d06;
+}
 .dark_theme{
   --bg-primary: #070d06;
   --bg-secondary:#1c2f1a;
@@ -60,6 +64,7 @@ html, body{
   overflow: hidden;
   overflow-y: auto;
 }
+
 
 body{
   max-width: 1800px;

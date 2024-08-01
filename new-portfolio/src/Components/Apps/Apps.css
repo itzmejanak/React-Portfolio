@@ -1,0 +1,183 @@
+.integration-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: var(--bg-primary);
+  }
+  @media (min-width: 640px) {
+    .integration-section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .integration-section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  .integration-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1120px;
+  }
+  .integration-section .container .filter-buttons {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+  
+  .integration-section .container .filter-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--foreground);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-primary);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .integration-section .container .filter-button:hover,
+  .integration-section .container .filter-button:focus {
+    color: var(--foreground);
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .integration-section .container .filter-button.active {
+    color: var(--foreground);
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+  }
+  
+  .integration-section .container .integration-section .container .title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    color: var(--foreground);
+  }
+  @media (min-width: 640px) {
+    .integration-section .container .title {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .integration-section .container .title {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+  .integration-section .container .description {
+    max-width: 32rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: var(--muted-foreground);
+  }
+
+  .text-center {
+    text-align: end;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 0rem;
+  }
+  @media (min-width: 1024px) {
+    .integration-section .container .grid {
+      gap: 2.5rem;
+      margin-top: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .integration-section .container .card {
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .integration-section .container .card-content {
+    padding: 2rem;
+  }
+  .integration-section .container .card-header {
+    display: flex;
+    align-items: center;
+  }
+  .integration-section .container .card-img {
+    flex-shrink: 0;
+    width: 3rem;
+    height: auto;
+  }
+  .integration-section .container .card-info {
+    margin-left: 1.25rem;
+    margin-right: auto;
+  }
+  .integration-section .container .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground);
+  }
+  .integration-section .container .card-description {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+  .integration-section .container .card-icon {
+    display: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--primary);
+  }
+  .integration-section .container .card-text {
+    margin-top: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: var(--muted-foreground);
+  }
+  @media (min-width: 640px) {
+    .card-icon {
+      display: block;
+    }
+  }
+  .integration-section .container .link {
+    display: inline-flex;
+    padding: 0.75rem;
+    font-weight: 500;
+    color: var(--primary);
+    transition: var(--transition);
+  }
+  .integration-section .container .link:hover,
+  .integration-section .container .link:focus {
+    color: var(--primary-accent);
+    text-decoration: underline;
+  }
+
+  /* Media Queries */
+
+/* Extra small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    .integration-section .container .filter-button {
+        margin-top: 20px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 2px;
+      font-size: 0.75rem;
+    }
+  }
+  
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (max-width: 992px) {
+    .integration-section .container .filter-button {
+      margin-top: 20px;
+      padding: 0.5rem .6rem;
+      font-size: 0.7rem;
+    }
+  }
