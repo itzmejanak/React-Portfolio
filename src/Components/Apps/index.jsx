@@ -6,12 +6,12 @@ const Apps = () => {
   return (
     <section className="integration-section">
       <div className="container">
-      <div class="filter-buttons">
-        <button class="filter-button">All</button>
-        <button class="filter-button">Gmail</button>
-        <button class="filter-button">Slack</button>
-        <button class="filter-button">Shopify</button>
-        <button class="filter-button">Twitter</button>
+      <div className="filter-buttons">
+        <button className="filter-button">All</button>
+        <button className="filter-button">Gmail</button>
+        <button className="filter-button">Slack</button>
+        <button className="filter-button">Shopify</button>
+        <button className="filter-button">Twitter</button>
       </div>
 
 

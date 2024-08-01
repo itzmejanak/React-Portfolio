@@ -25,7 +25,7 @@ const Footer = () => {
                 return (
                   <LinkComponent 
                     to={route.id || ""} 
-                    smooth={true} 
+                    smooth={list.title !== "Explore" ? "true" : undefined} 
                     className='route' 
                     key={routeIndex}
                   >
