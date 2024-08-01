@@ -8,7 +8,7 @@ const Projects = () => {
   const [activeProjects, setActiveProjects] = useState(projects);
   const [load, setLoad] = useState(false)
 
-  useEffect(()=>{
+  useEffect(()=> {
     setLoad(true)
     setTimeout(() => {
       setLoad(false)
