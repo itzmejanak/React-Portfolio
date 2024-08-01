@@ -17,7 +17,7 @@ import ThemeSwitcher from './Commons/ThemeSwitcher';
 import Apps from './Components/Apps';
 
 const MainPage = () => (
-  <>
+  <div>
     <Hero />
     <About />
     <Skill />
@@ -25,7 +25,7 @@ const MainPage = () => (
     <Projects />
     <Testimonials />
     <Contact />
-  </>
+  </div>
 );
 
 function App() {
@@ -37,11 +37,11 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeSwitcher />
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/React-Portfolio" element={<MainPage />} />
         <Route path="/e-book" element={<PDF />} />
         <Route path="/apps" element={<Apps />} />
       </Routes>
