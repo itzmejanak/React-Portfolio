@@ -457,55 +457,69 @@ export const appData = [
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/gmail-logo.png",
     title: "Gmail",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Productivity"
   },
   {
     id: 2,
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/slack-logo.png",
     title: "Slack",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Productivity"
   },
   {
     id: 3,
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/shopify-logo.png",
     title: "Shopify",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Tools"
   },
   {
     id: 4,
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/intercom-logo.png",
     title: "Intercom",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Personalization"
   },
   {
     id: 5,
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/twitter-logo.png",
     title: "Twitter",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Personalization "
   },
   {
     id: 6,
     imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png",
     title: "Sketch",
     description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    category: "Personalization"
   }
 ];
 
 
-export const pdfData =  [
+
+export const pdfData = [
   {
-    imgSrc: "https://imgs.search.brave.com/fCuezFy-Ap0axO-TZqBUnoXON0NlsfaL8ZEk1Hd4J9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Rl/d2l0aGN1cmlvdXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA3L1BZVEhP/Ti1CT09LLTQucG5n",
+    imgSrc: "https://imgs.search.brave.com/fCuezFy-Ap0axO-TZqBUnoXON0NlsfaL8ZEk1Hd4J9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Rl/d2l0aGN1cmlvdXMu/Y29tL3pwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA3L1BZVEhP/Ti1CT09LLTQucG5n",
     altText: "E-book image",
     discount: "JavaScript",
     itemName: "Eloquent JavaScript",
     oldPrice: "$20.50",
     newPrice: "Free",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Productivity"
   },
   {
     imgSrc: "https://imgs.search.brave.com/E6Be4hxmpwxDj_KN-QPJ4BZOFIzHb0RtFCRjzkpQ9Pc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXRv/cmlhbHppbmUuY29t/L21lZGlhLzIwMTgv/MDEvTm9kZUpzX1N1/Y2NpbmN0bHkyLmpw/Zw",
@@ -514,7 +528,8 @@ export const pdfData =  [
     itemName: "Python Crash Course",
     oldPrice: "$15.00",
     newPrice: "$10.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Java"
   },
   {
     imgSrc: "https://imgs.search.brave.com/gVsGOe06Da7iV_OPM0fpwy1HKGc12g0JYtKOVTGB27M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXRv/cmlhbHppbmUuY29t/L21lZGlhLzIwMTgv/MDEvOTctdGhpbmdz/LWV2ZXJ5LXByb2dy/YW1tZXItc2hvdWxk/LWtub3cyLmpwZWc",
@@ -523,7 +538,8 @@ export const pdfData =  [
     itemName: "React: Up & Running",
     oldPrice: "$30.00",
     newPrice: "$25.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Productivity"
   },
   {
     imgSrc: "https://imgs.search.brave.com/kUPYGRlvh3hf-kC3hpdRKemQbDgTI3irGsLK-hsGUlM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxcEZKVXp6M0wu/anBn",
@@ -532,7 +548,8 @@ export const pdfData =  [
     itemName: "Angular Development with TypeScript",
     oldPrice: "$40.00",
     newPrice: "$35.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Python"
   },
   {
     imgSrc: "https://imgs.search.brave.com/51kNr5RKnAkOXr_vAseSBlN8niPWvBNoXh27tj3PpxU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFYWG5yMUdMV0wu/anBn",
@@ -541,7 +558,8 @@ export const pdfData =  [
     itemName: "Vue.js: Up & Running",
     oldPrice: "$50.00",
     newPrice: "$45.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Productivity"
   },
   {
     imgSrc: "https://imgs.search.brave.com/UhpWC_Pdd-vlLVd7u10Y6KmgNxatayQSFmb-aSURIUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFjbFJRQjZGU0wu/anBn",
@@ -550,16 +568,18 @@ export const pdfData =  [
     itemName: "Node.js: Up & Running",
     oldPrice: "$60.00",
     newPrice: "$55.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Python"
   },
   {
-    imgSrc: "https://imgs.search.brave.com/vvEkuFwe0RJ9Fn1bYn6lndrzaEP3pE8jRGwwSljmaP8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFOYWFSeURuY0wu/anBn",
+    imgSrc: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
     altText: "E-book image",
     discount: "Ruby",
     itemName: "Ruby on Rails Tutorial",
     oldPrice: "$70.00",
     newPrice: "$65.00",
-    downloadLink: "#"
+    downloadLinkJ: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Java"
   },
   {
     imgSrc: "https://imgs.search.brave.com/Zuh2E9JN-VR5CFNSW2LBUrGGYPbzoWKK6B9e1XQl26o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFibFNHMmhGUEwu/anBn",
@@ -568,6 +588,7 @@ export const pdfData =  [
     itemName: "Swift Programming Language",
     oldPrice: "$80.00",
     newPrice: "$75.00",
-    downloadLink: "#"
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    category: "Java"
   }
 ];

@@ -1,22 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { appData } from '../../sources';
 import './Apps.css';
 
 const Apps = () => {
+  // State to manage the selected category
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  // Filter appData based on selectedCategory
+  const filteredApps = appData.filter(app => 
+    selectedCategory === 'All' || app.category === selectedCategory
+  );
+
   return (
     <section className="integration-section">
       <div className="container">
-      <div className="filter-buttons">
-        <button className="filter-button">All</button>
-        <button className="filter-button">Gmail</button>
-        <button className="filter-button">Slack</button>
-        <button className="filter-button">Shopify</button>
-        <button className="filter-button">Twitter</button>
-      </div>
-
+        <div className="filter-buttons">
+          <button 
+            className="filter-button" 
+            onClick={() => setSelectedCategory('All')}
+          >
+            All
+          </button>
+          <button 
+            className="filter-button" 
+            onClick={() => setSelectedCategory('Productivity')}
+          >
+            Productivity
+          </button>
+          <button 
+            className="filter-button" 
+            onClick={() => setSelectedCategory('Tools')}
+          >
+            Tools
+          </button>
+          <button 
+            className="filter-button" 
+            onClick={() => setSelectedCategory('Personalization')}
+          >
+            Personalization
+          </button>
+          <button 
+            className="filter-button" 
+            onClick={() => setSelectedCategory('Reading')}
+          >
+            Reading
+          </button>
+        </div>
 
         <div className="grid">
-          {appData.map((app) => (
+          {filteredApps.map((app, index) => (
             <div key={app.id} className="card">
               <div className="card-content">
                 <div className="card-header">
@@ -30,6 +62,7 @@ const Apps = () => {
                   </svg>
                 </div>
                 <p className="card-text">{app.details}</p>
+                <a href={app.link} key={index} target='_blank' className="add-btn">Download</a>
               </div>
             </div>
           ))}
