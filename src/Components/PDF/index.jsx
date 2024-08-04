@@ -3,12 +3,16 @@ import './PDF.css';
 import { pdfData } from '../../sources';
 
 const PDF = () => {
+  // Get unique categories from pdfData
+  const categories = Array.from(new Set(pdfData.map(item => item.category)));
+  categories.unshift('All'); // Add 'All' to the beginning of the array
+
   // State to manage the selected category
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   // Filter pdfData based on selectedCategory
   const filteredItems = pdfData.filter(item => 
-    selectedCategory === 'all' || item.category.toLowerCase() === selectedCategory.toLowerCase()
+    selectedCategory === 'All' || item.category.toLowerCase() === selectedCategory.toLowerCase()
   );
 
   return (
@@ -22,17 +26,17 @@ const PDF = () => {
               className="filter-select" 
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              <option value="all">All</option>
-              <option value="java">Java</option>
-              <option value="python">Python</option>
-              <option value="productivity">Productivity</option>
-              <option value="new">New</option>
+            {
+              categories.map((category, index)=>(
+                <option value={category} key={index}>{category}</option>
+              ))
+            }
             </select>
           </div>
 
           <div className="filter-items">
             {filteredItems.map((item) => (
-              <div className="filter-item" data-aos="fade-right" key={item.id}>
+              <div className="filter-item" data-aos="fade-right" data-aos-delay="500"key={item.id}>
                 <div className="item-img">
                   <img src={item.imgSrc} alt={item.altText} />
                   <span className="discount">{item.category}</span>

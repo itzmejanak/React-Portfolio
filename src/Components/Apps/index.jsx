@@ -3,6 +3,16 @@ import { appData } from '../../sources';
 import './Apps.css';
 
 const Apps = () => {
+  const removeDuplicates = (arr) => {
+    const uniqueCategories = new Set();
+    uniqueCategories.add("All");
+    arr.forEach((item) => {
+      uniqueCategories.add(item.category.trim());
+    });
+    return Array.from(uniqueCategories);
+  };
+  
+  const uniqueData = removeDuplicates(appData);
   // State to manage the selected category
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -15,44 +25,26 @@ const Apps = () => {
     <section className="integration-section">
       <div className="container">
         <div className="filter-buttons">
-          <button 
-            className="filter-button" 
-            onClick={() => setSelectedCategory('All')}
-          >
-            All
-          </button>
-          <button 
-            className="filter-button" 
-            onClick={() => setSelectedCategory('Productivity')}
-          >
-            Productivity
-          </button>
-          <button 
-            className="filter-button" 
-            onClick={() => setSelectedCategory('Tools')}
-          >
-            Tools
-          </button>
-          <button 
-            className="filter-button" 
-            onClick={() => setSelectedCategory('Personalization')}
-          >
-            Personalization
-          </button>
-          <button 
-            className="filter-button" 
-            onClick={() => setSelectedCategory('Reading')}
-          >
-            Reading
-          </button>
+          {
+            uniqueData.map((category, index)=>(
+              <button 
+                key={index}
+                className="filter-button" 
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))
+          }
         </div>
+
 
         <div className="grid">
           {filteredApps.map((app, index) => (
-            <div key={app.id} className="card">
-              <div className="card-content">
+            <div key={app.id} className="card" >
+              <div className="card-content" data-aos="fade-right" data-aos-delay="200">
                 <div className="card-header">
-                  <img className="card-img" src={app.imgSrc} alt={app.title} />
+                  <img className="card-img" src={app.imgSrc} alt={app.title} ata-aos="fade-left" data-aos-delay="100"/>
                   <div className="card-info">
                     <p className="card-title">{app.title}</p>
                     <p className="card-description">{app.description}</p>
