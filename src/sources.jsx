@@ -453,142 +453,598 @@ export const footer = [
 
 export const appData = [
   {
-    id: 1,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/gmail-logo.png",
-    title: "Gmail",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Productivity"
+    "id": 1,
+    "imgSrc": "https://cdn4.iconfinder.com/data/icons/files-47/64/apk-512.png",
+    "title": "AI Photo Enhancer",
+    "description": "Photo enhancement tool",
+    "details": "Enhances photos with AI algorithms.",
+    "link": "https://www.mediafire.com/file/fw7eq8ckqfwzw2v/AI_Photo_Enhancer_3.4.1_kill.apk/file",
+    "category": "Editor"
   },
   {
-    id: 2,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/slack-logo.png",
-    title: "Slack",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Productivity"
+    "id": 2,
+    "imgSrc": "https://cdn4.iconfinder.com/data/icons/files-47/64/apk-512.png",
+    "title": "Autodesk SketchBook",
+    "description": "Sketching and drawing app",
+    "details": "Professional-grade sketching tools.",
+    "link": "https://www.mediafire.com/file/9jjdky5421hw3py/Autodesk_SketchBook_5.1.5.apk/file",
+    "category": "Editor"
   },
   {
-    id: 3,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/shopify-logo.png",
-    title: "Shopify",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Tools"
+    "id": 3,
+    "imgSrc": "https://cdn4.iconfinder.com/data/icons/files-47/64/apk-512.png",
+    "title": "GenZArt",
+    "description": "Art creation app",
+    "details": "Create and edit digital art easily.",
+    "link": "https://www.mediafire.com/file/kofijdlqhmcgwia/GenZArt_4.3.1_sign.apk/file",
+    "category": "Editor"
   },
   {
-    id: 4,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/intercom-logo.png",
-    title: "Intercom",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Personalization"
+    "id": 4,
+    "imgSrc": "https://cdn4.iconfinder.com/data/icons/files-47/64/apk-512.png",
+    "title": "Photify AI",
+    "description": "AI photo editing app",
+    "details": "AI-powered photo enhancements.",
+    "link": "https://www.mediafire.com/file/0sxde8mhisvlw1t/Photify_AI_1.1.3.apk/file",
+    "category": "Editor"
   },
   {
-    id: 5,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/twitter-logo.png",
-    title: "Twitter",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Personalization "
+    "id": 5,
+    "imgSrc": "https://cdn4.iconfinder.com/data/icons/files-47/64/apk-512.png",
+    "title": "PixelLeap",
+    "description": "Pixel art editor",
+    "details": "Create and edit pixel art graphics.",
+    "link": "https://www.mediafire.com/file/dx66j4qhm12fzzs/PixelLeap.apk/file",
+    "category": "Editor"
   },
   {
-    id: 6,
-    imgSrc: "https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png",
-    title: "Sketch",
-    description: "Direct Integration",
-    details: "Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    link: "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
-    category: "Personalization"
-  }
+    "id": 6,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/8108/8108760.png",
+    "title": "Oto Music",
+    "description": "Music player app",
+    "details": "Play and manage your music collection.",
+    "link": "https://www.mediafire.com/file/w7gj6yhobqp4hrs/Oto_Music_3.9.5_kill.apk/file",
+    "category": "Music"
+  },
+  {
+    "id": 7,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/8108/8108760.png",
+    "title": "PLAYit",
+    "description": "Media player app",
+    "details": "Play videos and music with ease.",
+    "link": "https://www.mediafire.com/file/l4lsqvyvdffq6de/PLAYit_2.7.7.12.apk/file",
+    "category": "Music"
+  },
+
+  {
+    "id": 8,
+    "imgSrc": "https://securitygladiators.com/wp-content/uploads/16.APK-File-Image.jpg",
+    "title": "Anti Spy",
+    "description": "Spyware removal tool",
+    "details": "Detects and removes spyware and malware.",
+    "link": "https://www.mediafire.com/file/hde11zj6l4z78as/Anti_Spy_6.0.4_sign%25282%2529.apk/file",
+    "category": "Optimization"
+  },
+  {
+    "id": 9,
+    "imgSrc": "https://securitygladiators.com/wp-content/uploads/16.APK-File-Image.jpg",
+    "title": "Avast Cleanup",
+    "description": "System cleaning app",
+    "details": "Cleans junk files and optimizes performance.",
+    "link": "https://www.mediafire.com/file/g54kt4ieueezk76/Avast_Cleanup_24.01.0.apk/file",
+    "category": "Optimization"
+  },
+  {
+    "id": 10,
+    "imgSrc": "https://securitygladiators.com/wp-content/uploads/16.APK-File-Image.jpg",
+    "title": "Battery Guru",
+    "description": "Battery management app",
+    "details": "Monitors and optimizes battery usage.",
+    "link": "https://www.mediafire.com/file/navkg07yjwzluh9/Battery_Guru_2.2.5.2%25282%2529.apk/file",
+    "category": "Optimization"
+  },
+  {
+    "id": 11,
+    "imgSrc": "https://securitygladiators.com/wp-content/uploads/16.APK-File-Image.jpg",
+    "title": "mod Edit",
+    "description": "Mod editing tool",
+    "details": "Edit and modify application mods.",
+    "link": "https://www.mediafire.com/file/wqggbvk55yz38jy/mod_Edit_sign_sign.apk/file",
+    "category": "Optimization"
+  },
+  {
+    "id": 12,
+    "imgSrc": "https://securitygladiators.com/wp-content/uploads/16.APK-File-Image.jpg",
+    "title": "Voice Changer - Audio Effects",
+    "description": "Audio effects app",
+    "details": "Change and customize audio effects.",
+    "link": "https://www.mediafire.com/file/x3euomgjrqwe7b1/Voice_Changer_-_Audio_Effects_1.5.8_sign.apk/file",
+    "category": "Optimization"
+  },
+  {
+    "id": 13,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Antivirus AI",
+    "description": "AI-based antivirus",
+    "details": "AI-powered protection against viruses.",
+    "link": "https://www.mediafire.com/file/euwn55ttckpbcj2/Antivirus_AI_2.0.5_sign.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 14,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Flow Launcher",
+    "description": "Custom launcher app",
+    "details": "Personalize and manage your device's home screen.",
+    "link": "https://www.mediafire.com/file/ysym9pr9sq749w9/Flow_Launcher_18.3.apk/file",
+    "category": "Personalization"
+  },
+
+  {
+    "id": 15,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Hyperion",
+    "description": "Custom launcher app",
+    "details": "Highly customizable launcher with various themes.",
+    "link": "https://www.mediafire.com/file/7yxyxjlsnipvuvt/hyperion_2.0.52.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 16,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Love Launcher",
+    "description": "Themed launcher app",
+    "details": "Beautiful and romantic themes for your home screen.",
+    "link": "https://www.mediafire.com/file/htfc1kymk4j91fe/Love_Launcher_4.3.1_sign.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 17,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Muviz Edge",
+    "description": "Edge lighting app",
+    "details": "Customizable edge lighting effects for your device.",
+    "link": "https://www.mediafire.com/file/3bw4f0e9x29a70d/Muviz_Edge_1.9.1.0.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 18,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "NewLook Launcher",
+    "description": "Launcher with fresh look",
+    "details": "A launcher with a modern and clean interface.",
+    "link": "https://www.mediafire.com/file/scrpe4xiyyycmto/NewLook_Launcher_4.0.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 19,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Niagara Launcher",
+    "description": "Minimalist launcher",
+    "details": "Streamlined launcher with an easy-to-use interface.",
+    "link": "https://www.mediafire.com/file/g6zayz18c9s93wd/Niagara_Launcher_1.9.5.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 20,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "CCleaner",
+    "description": "System cleaning tool",
+    "details": "Optimizes and cleans up your device.",
+    "link": "https://www.mediafire.com/file/6orxtj47np2daaa/CCleaner_23.22.0.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 21,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "ES File Explorer",
+    "description": "File management app",
+    "details": "Manage and organize files on your device.",
+    "link": "https://www.mediafire.com/file/fbl9fp4ku4btd3n/ES_File_Explorer_4.4.0.2.1.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 22,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "File Manager",
+    "description": "Efficient file management",
+    "details": "Manage and organize files with ease.",
+    "link": "https://www.mediafire.com/file/8djlkzvzab8ymvl/File_manager.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 23,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "HabitNow",
+    "description": "Habit tracking app",
+    "details": "Track and build positive habits effectively.",
+    "link": "https://www.mediafire.com/file/sdvgcat47fl8rif/HabitNow_2.1.8.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 24,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "iLovePDF",
+    "description": "PDF management tool",
+    "details": "Edit, merge, and convert PDF files.",
+    "link": "https://www.mediafire.com/file/6yvdjjiio2dov5t/iLovePDF_3.6.2_sign.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 25,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "My Diary",
+    "description": "Digital diary app",
+    "details": "Keep track of your thoughts and notes.",
+    "link": "https://www.mediafire.com/file/vfrauburfzicsnb/My_Diary_1.03.29.0204.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 26,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "To-do List",
+    "description": "Task management tool",
+    "details": "Organize and track your tasks and to-dos.",
+    "link": "https://www.mediafire.com/file/5kh5es6rd5cpw3a/To-do_List_1.02.38.1212.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 27,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/9646/9646083.png",
+    "title": "WPS Office Lite",
+    "description": "Office suite",
+    "details": "Compact office suite for document editing.",
+    "link": "https://www.mediafire.com/file/ajjfqzfvdolv1e6/WPS_Office_lite.apk/file",
+    "category": "Productivity"
+  },
+  {
+    "id": 28,
+    "imgSrc": "https://static.vecteezy.com/system/resources/previews/015/426/286/large_2x/apk-file-format-icon-apk-extension-filled-icon-free-vector.jpg",
+    "title": "Programming Hub",
+    "description": "Coding learning platform",
+    "details": "Learn and practice various programming languages.",
+    "link": "https://www.mediafire.com/file/ko2qc4zvsabk310/Programming_Hub.apk/file",
+    "category": "Study"
+  },
+  {
+    "id": 29,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "1.1.1.1",
+    "description": "Secure DNS resolver",
+    "details": "Enhance your privacy with a fast and secure DNS resolver.",
+    "link": "https://www.mediafire.com/file/uaer6g0w17vwe7s/1.1.1.1_6.32_sign.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 30,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "All Document Reader Offline",
+    "description": "Offline document reader",
+    "details": "Read various document formats without an internet connection.",
+    "link": "https://www.mediafire.com/file/hnkrqytn64bwx05/All_Document_Reader_Offline_2.6.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 31,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "AntiSplit VIP",
+    "description": "File splitter tool",
+    "details": "Split large files into smaller parts and merge them back.",
+    "link": "https://www.mediafire.com/file/z0l3deilehxo9fn/AntiSplit_VIP_1.0.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 32,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "Developer Assistant",
+    "description": "Development tools",
+    "details": "Access various tools and utilities for developers.",
+    "link": "https://www.mediafire.com/file/qaw2gkbbad51b0b/Developer_Assistant_1.2.2.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 33,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "Equalizer",
+    "description": "Audio equalizer",
+    "details": "Adjust the audio settings for a better listening experience.",
+    "link": "https://www.mediafire.com/file/biyn5ia2e7wv894/Equalizer_4.9.7.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 34,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "IAS.cmd",
+    "description": "Command-line tool",
+    "details": "Run command-line operations and scripts efficiently.",
+    "link": "https://www.mediafire.com/file/jpeyu2an7nwqds1/IAS.cmd/file",
+    "category": "Tools"
+  },
+  {
+    "id": 35,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "Latest",
+    "description": "Latest updates",
+    "details": "Stay updated with the latest news and features.",
+    "link": "https://www.mediafire.com/file/f8aabvmzdn1j4cl/Latest.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 36,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "Mobile Firewall",
+    "description": "Firewall protection",
+    "details": "Protect your mobile device from unauthorized access.",
+    "link": "https://www.mediafire.com/file/kcj3je39k3vw21r/Mobile_Firewall_1.1.10.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 37,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "NetShare",
+    "description": "Network sharing",
+    "details": "Share your internet connection with other devices.",
+    "link": "https://www.mediafire.com/file/a8nq8jqp1v325uw/NetShare_2.25.apk/file",
+    "category": "Tools"
+  },
+  {
+    "id": 38,
+    "imgSrc": "https://cdn3d.iconscout.com/3d/free/thumb/free-apk-file-10134904-8248663.png?f=webp",
+    "title": "Text Extractor",
+    "description": "Extract text from images",
+    "details": "Convert images containing text into editable text format.",
+    "link": "https://www.mediafire.com/file/javua1x3y4knjwe/Text_Extractor_1.5.7_kill_sign.apk/file",
+    "category": "Tools"
+  },
 ];
 
 
 
 export const pdfData = [
   {
-    imgSrc: "https://imgs.search.brave.com/fCuezFy-Ap0axO-TZqBUnoXON0NlsfaL8ZEk1Hd4J9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2Rl/d2l0aGN1cmlvdXMu/Y29tL3pwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA3L1BZVEhP/Ti1CT09LLTQucG5n",
-    altText: "E-book image",
-    discount: "JavaScript",
-    itemName: "Eloquent JavaScript",
-    oldPrice: "$20.50",
+    "imgSrc": "https://www.red-gate.com/simple-talk/wp-content/uploads/2020/02/word-image-6.png",
+    "altText": "Disk Management PDF",
+    "discount": "Linux",
+    "itemName": "Disk Management",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/p0fcm4hlfl0m999b9o3jh/Disk-Management_Module-8.pdf?rlkey=l2r1tk381fzfuayf4kvh179l4&st=cyr0bszi&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/4Tf1r-V-N9qikF-c9tqIZma0HUSSWFyXQ3JS1A5ouFc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/Lzcxb0xiWmI3NXdM/LmpwZw",
+    "altText": "Linux Fundamentals PDF",
+    "discount": "Linux",
+    "itemName": "Linux Fundamentals",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/1755fmqoo8g2ke88z86du/Linux-fundamentals_Module-4.pdf?rlkey=m51ao6l201ong47lnws7q6f14&st=mpfbav9z&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/qLffSlCphvGX2PC6uawvdJotpx1vNlT1ZjFOADKowaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z3VydTk5LmNvbS9p/bWFnZXMvMS9MaW51/eC1jb3ZlcnBhZ2Uu/anBn",
+    "altText": "The Basic PDF",
+    "discount": "Linux",
+    "itemName": "Linux Fundamentals: The Basic",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/ahsfx37jt5ca99j5pcs8o/Linux-fundamentals_The_Basic_Module-1.pdf?rlkey=a3wtgjpdofcj7e8q1lozunmir&st=ouyxo9qh&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/WkHCpsft_mM5rDlDD0b5M5YKlEO6qa7nG_3SC5inOgQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxMTZNbVM4bnBM/LmpwZw",
+    "altText": "Linux Cookbook PDF",
+    "discount": "Linux",
+    "itemName": "Linux Cookbook",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/8rykkogfj3y29stnn5fit/Linux_CookBook.pdf?rlkey=oqpeb9j5mifeeek7cr7h3kicb&st=ztabmoeb&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/XkNm2QfJ7FTl0rzDsYlDSdeT6E3CwZPXe_uLSrDrfYk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bWFnYXppbmVzLnRv/cC93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8xMi9Db21wdXRl/ci1OZXR3b3JraW5n/LUJpYmxlLTMtaW4t/MS1UaGUtQ29tcGxl/dGUtQ3Jhc2gtQ291/cnNlLXRvLUVmZmVj/dGl2ZWx5LURlc2ln/bi1JbXBsZW1lbnQt/TWFuYWdlLndlYnA",
+    "altText": "Networking Full Crash Course PDF",
+    "discount": "Linux",
+    "itemName": "Networking Full Crash Course",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/sis3j1atdxwfxxt78euv5/Networking_Full_Crash_Course_Module-6.pdf?rlkey=hkhp7klpkvepck5u4mkutpd9u&st=ma0zdaej&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/vHKC7U7epIuR9jPAdZDtltCGHA_NdcrqpYGNgehxpJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzQxa1hCa3QxM1pM/LmpwZw",
+    "altText": "Shell Scripting PDF",
+    "discount": "Linux",
+    "itemName": "Shell Scripting",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/g2kfy5gskzic5uq616w9f/Shell-scripting_Module-7.pdf?rlkey=ni2c0mbdumuw604dc5sgs7itp&st=zx7bgwak&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/C3f9ygAvLsrBlbrH5Too91K2aC9_q0z_7Rxw9WGJQJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDE2NGdCVWtXc0wu/anBn",
+    "altText": "System Access and File System PDF",
+    "discount": "Linux",
+    "itemName": "System Access and File System",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/alwypzn64jl20sfbafitz/System-Access-and-File-System_Module-3.pdf?rlkey=sbu52oemzsx2bznvq0yt8q6rc&st=nymvolln&dl=0",
+    "category": "Linux"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/uZpMdDbB_OF8xh5VgUsUy4et2mrXYM9mAdC3644QYjk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxWnNDMGVqSThM/LmpwZw",
+    "altText": "System Administration PDF",
+    "discount": "Linux",
+    "itemName": "System Administration",
+    "oldPrice": "N/A",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/o29uk7i5ujie74vsj17rz/System-Administration_Module-5.pdf?rlkey=t1xepfqc5bj5y3p2kf5dpsoqs&st=4dalc2ir&dl=0",
+    "category": "Linux"
+  },
+
+  {
+    "imgSrc": "https://imgs.search.brave.com/L4Hmntyz-8GztJOgNa9zgeY6mb37qasMe10zOJXYheE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxNjdhYVZ4czNM/LmpwZw",
+    "altText": "8 Week Java image",
+    "discount": "Java",
+    "itemName": "8 Week Java",
+    "oldPrice": "$15.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/9f5vtha5uhqhylq05lldt/8-week-java.pdf?rlkey=u0brziknfqot7phkoh7tx493u&st=r54knhkg&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/Y84TOjLvi0qfxlmRQ8KIUI491sm1Uc_CDyxMuH61ffU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/cGVybGVnby5jb20v/Ym9va3MvUk1fQm9v/a3MvcGFja3RfcHVi/X3ZwbmNrd2VnLzk3/ODE3ODk4MDA1MDBf/MzAwXzQ1MC53ZWJw",
+    "altText": "1000 Java Problems image",
+    "discount": "Java",
+    "itemName": "1000 Java Problems",
+    "oldPrice": "$18.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/vuztdtu3p1ko2wysothuv/1000-Java-Problems.pdf?rlkey=1zihkvttdgd2zf1af0dyvj924&st=ktfc445w&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/4ylR0DtP6usgTdNAbrAZQ8p2g2H2ubIKLdLAG_R4uig/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFPU0lLVytXS0wu/anBn",
+    "altText": "Beginners Java image",
+    "discount": "Java",
+    "itemName": "Beginners Java",
+    "oldPrice": "$12.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/t6uc7gtzfdh2i3liv8v30/Bignners-Java.pdf?rlkey=tt0q481oiz7xhh2ew59iwh7e2&st=8k0qyi03&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/K9HcJVbV0mCNmRqSn9jeoa7DC-P88rCL_HmyT1ggGuE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFOOGRaUWRsZEwu/anBn",
+    "altText": "Java image",
+    "discount": "Java",
+    "itemName": "Java",
+    "oldPrice": "$10.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/lycrs9jito75m4s0bm23t/Java.pdf?rlkey=xwlsgka0xyc7bwwlrzj8yfj53&st=g2bf6meq&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/8h_G-toRRkpKUDv0aWo_fh3DM4B9tIQ9a4hNn8I4E64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF0cEJRWXZIQkwu/anBn",
+    "altText": "Java For Absolutely Beginners image",
+    "discount": "Java",
+    "itemName": "Java For Absolutely Beginners",
+    "oldPrice": "$8.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/x3hnu6wvt6st7gct8edyk/Java-For-Absolutely-Biggeners.pdf?rlkey=1vopidgfg1qm5q8jvfrd3ia0m&st=aprcciwk&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/ymqUu3LtySY3AybAlgLYs5NBZvv5yGtNyKc5W03OLEY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFVczNNTXJqOUwu/anBn",
+    "altText": "Java FX for Dummies image",
+    "discount": "Java",
+    "itemName": "Java FX for Dummies",
+    "oldPrice": "$25.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/e88v3oags9m0yk2o8si7m/Java-FX-for-Dummies-PDFDrive.pdf?rlkey=oyuq2ioucf0cquzm5k0ynei7z&st=edb2usd1&dl=0",
+    "category": "Java"
+  },
+  {
+    "imgSrc": "https://imgs.search.brave.com/nHdflvSQlpxW-ez4v0sfdA-LizMuobGETmOLfgfOxCc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/Lzcxa3dMR0tKSjRM/LmpwZw",
+    "altText": "Java in One Day image",
+    "discount": "Java",
+    "itemName": "Java in One Day",
+    "oldPrice": "$5.00",
+    "newPrice": "Free",
+    "downloadLink": "https://www.dropbox.com/scl/fi/2qmhdqufqbzufqlasodv5/Java-in-One-day.pdf?rlkey=ugd2atxbc9hs7zkoeg6cgd6y0&st=044mj0qv&dl=0",
+    "category": "Java"
+  },
+
+  {
+    imgSrc: "https://imgs.search.brave.com/01yWXinkR2IotpXbnFqyc3jBCpZ4eiFsqoYUvVe1dqA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxM25VUldra2JM/LmpwZw",
+    altText: "Data Structures and Algorithms in Java by Robert Lafore",
+    discount: "DSA",
+    itemName: "Data Structures and Algorithms in Java",
+    oldPrice: "N/A",
     newPrice: "Free",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    downloadLink: "https://www.dropbox.com/scl/fi/mcbnzdbs5fc6m9ih7ccqo/Data-Structures-Algorithms-in-Java-Robert-Lafore.pdf?rlkey=zq4vs31msuk3p0lhzfkdyeg6r&st=riyz6cav&dl=0",
+    category: "DSA"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/KH6vwuElmTntbZ0P8JBydFjV8oDUvHdwltGBYkACJCM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaXNibmRiLmNv/bS9jb3ZlcnMvMzgv/NDgvOTc4MDI2MjAz/Mzg0OC5qcGc",
+    altText: "Introduction to Algorithms, 3rd Edition",
+    discount: "DSA",
+    itemName: "Introduction to Algorithms",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/92l9593m8dog2p7mwwnok/Introduction-to-algorithms-3rd-edition.pdf?rlkey=3xds998dg3vutmfj6pzatv6p7&st=fm2mxexw&dl=0",
+    category: "DSA"
+  },
+
+  {
+    imgSrc: "https://imgs.search.brave.com/1Esr8ocO0cJqk8L44TujKAj7sjD8T0iHHfiu-fNgd4E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFvQnJ5RjdwWkwu/anBn",
+    altText: "Excel Dashboards",
+    discount: "Microsoft",
+    itemName: "Excel Dashboards",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/otk0ibkpi7n1bj56lz7nz/Excel-Dashboards.pdf?rlkey=l3xp7av7kmp7heolord0ndmj7&st=mpxoo7qb&dl=0",
+    category: "Microsoft"
+  },
+
+  {
+    imgSrc: "https://imgs.search.brave.com/o0KGlg8i3i8mNBuAtVigx5Hy18aOvFnOjHvKbtuH3F0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxbUlxMmlKVVhM/LmpwZw",
+    altText: "Cracking the Coding Interview, 6th Edition",
+    discount: "Productivity",
+    itemName: "Cracking the Coding Interview, 6th Edition",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/mx9aenfjz310kzpsfx1px/Cracking-the-Coding-Interview-6th-Edition_-189-Programming-Questions-and-Solutions-PDFDrive.com.pdf?rlkey=256pia4kv5rn0zhxn93fata4j&st=km3ouovv&dl=0",
     category: "Productivity"
   },
   {
-    imgSrc: "https://imgs.search.brave.com/E6Be4hxmpwxDj_KN-QPJ4BZOFIzHb0RtFCRjzkpQ9Pc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXRv/cmlhbHppbmUuY29t/L21lZGlhLzIwMTgv/MDEvTm9kZUpzX1N1/Y2NpbmN0bHkyLmpw/Zw",
-    altText: "E-book image",
-    discount: "Python",
-    itemName: "Python Crash Course",
-    oldPrice: "$15.00",
-    newPrice: "$10.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Java"
-  },
-  {
-    imgSrc: "https://imgs.search.brave.com/gVsGOe06Da7iV_OPM0fpwy1HKGc12g0JYtKOVTGB27M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXRv/cmlhbHppbmUuY29t/L21lZGlhLzIwMTgv/MDEvOTctdGhpbmdz/LWV2ZXJ5LXByb2dy/YW1tZXItc2hvdWxk/LWtub3cyLmpwZWc",
-    altText: "E-book image",
-    discount: "React",
-    itemName: "React: Up & Running",
-    oldPrice: "$30.00",
-    newPrice: "$25.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
+    imgSrc: "https://imgs.search.brave.com/n8xE3_sepSaLi_077ZArTDo2UcOqTvrtQ0XoEMdcM-4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxZTlxNlQ4LVhM/LmpwZw",
+    altText: "Make Your Own PC For Beginners, 19th Edition",
+    discount: "Productivity",
+    itemName: "Make Your Own PC For Beginners, 19th Edition",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/zq94xe6ydl2mdl4j6dl5q/Make-Your-Own-PC-For-Beginners-19th-Edition-2024.pdf?rlkey=qxrmey3k3k2fvsw1dneta5vfu&st=d9ja87mn&dl=0",
     category: "Productivity"
   },
+
   {
-    imgSrc: "https://imgs.search.brave.com/kUPYGRlvh3hf-kC3hpdRKemQbDgTI3irGsLK-hsGUlM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxcEZKVXp6M0wu/anBn",
-    altText: "E-book image",
-    discount: "Angular",
-    itemName: "Angular Development with TypeScript",
-    oldPrice: "$40.00",
-    newPrice: "$35.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Python"
+    imgSrc: "https://imgs.search.brave.com/IeY-eLNpa_MzxTM6eQXwh-gN0RUPRchy0YMGyRI18pQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzUxR2N5R095TFRM/LmpwZw",
+    altText: "Artificial Intelligence",
+    discount: "AI",
+    itemName: "Artificial Intelligence",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/4rf68lmqmdich41w06c3o/Artificial-Intelligence.pdf?rlkey=astalorlqr5p746mpb9pivvqy&st=4mjy1d29&dl=0",
+    category: "AI"
   },
   {
-    imgSrc: "https://imgs.search.brave.com/51kNr5RKnAkOXr_vAseSBlN8niPWvBNoXh27tj3PpxU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFYWG5yMUdMV0wu/anBn",
-    altText: "E-book image",
-    discount: "Vue.js",
-    itemName: "Vue.js: Up & Running",
-    oldPrice: "$50.00",
-    newPrice: "$45.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Productivity"
+    imgSrc: "https://imgs.search.brave.com/fIMhnx8kXzop3NFSx-1ZBkq1NmhGAllM1QN98BdPVIo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb3V2/ZXJ0dXJlLm51bWls/b2cuY29tLzk3ODEz/OTQyNDkxMzhfdzMw/MC5qcGc", // Add appropriate image URLs
+    altText: "Coding with AI For Dummies",
+    discount: "AI",
+    itemName: "Coding with AI For Dummies",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/uzl3lgvvtikbqx18opnn9/Coding-with-AI-For-Dummies.pdf?rlkey=0bmxiambkrwlnp77i1rstdgig&st=rwl1uxhw&dl=0",
+    category: "AI"
   },
   {
-    imgSrc: "https://imgs.search.brave.com/UhpWC_Pdd-vlLVd7u10Y6KmgNxatayQSFmb-aSURIUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFjbFJRQjZGU0wu/anBn",
-    altText: "E-book image",
-    discount: "Node.js",
-    itemName: "Node.js: Up & Running",
-    oldPrice: "$60.00",
-    newPrice: "$55.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Python"
+    imgSrc: "https://imgs.search.brave.com/LkuOvrrsYlJfrWt9PD5cDEv2V8k-rsJuk_Pe05e1dXs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLVdRNFRR/VlRmekZxMnc3MjEt/a0toR1Z3LXQ1MDB4/NTAwLmpwZw", // Add appropriate image URLs
+    altText: "Developing Apps with GPT-4 and ChatGPT",
+    discount: "AI",
+    itemName: "Developing Apps with GPT-4 and ChatGPT",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=p1etlgec&dl=0",
+    category: "AI"
   },
   {
-    imgSrc: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    altText: "E-book image",
-    discount: "Ruby",
-    itemName: "Ruby on Rails Tutorial",
-    oldPrice: "$70.00",
-    newPrice: "$65.00",
-    downloadLinkJ: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Java"
-  },
-  {
-    imgSrc: "https://imgs.search.brave.com/Zuh2E9JN-VR5CFNSW2LBUrGGYPbzoWKK6B9e1XQl26o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFibFNHMmhGUEwu/anBn",
-    altText: "E-book image",
-    discount: "Swift",
-    itemName: "Swift Programming Language",
-    oldPrice: "$80.00",
-    newPrice: "$75.00",
-    downloadLink: "https://www.dropbox.com/scl/fi/r20qv332ydbmcbwmco9hz/Developing-Apps-with-GPT-4-and-ChatGPT-True-EPUB.pdf?rlkey=o4cxd8xafjmsjodijxkxwjhq7&st=nb2hjbsf&dl=0",
-    category: "Java"
+    imgSrc: "https://imgs.search.brave.com/0Z18oaip9fdKlG4VSWmNczRqIT4rVPZTm66lYiFELX8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFubCt5c3dkZEwu/anBn", // Add appropriate image URLs
+    altText: "Top AI Tools That Changed the Game in Digital Marketing",
+    discount: "AI",
+    itemName: "Top AI Tools That Changed the Game in Digital Marketing",
+    oldPrice: "N/A",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/k7fcfz92rl7hfmyb0zfyo/Top-AI-Tools-That-Changed-the-Game-in-Digital-Marketing.pdf?rlkey=vksqj7ncmm4ogc4e0uldtg42x&st=629woqb6&dl=0",
+    category: "AI"
   }
+
 ];
