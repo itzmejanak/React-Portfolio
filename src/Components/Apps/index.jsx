@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { appData } from '../../sources';
+import { FaSearch } from 'react-icons/fa'; // Import the search icon
 import './Apps.css';
 
 const Apps = () => {
@@ -13,38 +14,48 @@ const Apps = () => {
   };
   
   const uniqueData = removeDuplicates(appData);
-  // State to manage the selected category
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter appData based on selectedCategory
   const filteredApps = appData.filter(app => 
-    selectedCategory === 'All' || app.category === selectedCategory
+    (selectedCategory === 'All' || app.category === selectedCategory) &&
+    app.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <section className="integration-section">
       <div className="container">
-        <div className="filter-buttons">
-          {
-            uniqueData.map((category, index)=>(
-              <button 
-                key={index}
-                className="filter-button" 
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))
-          }
+        <div className="filter-search-container">
+          <div className="filter-selecct">
+            <select 
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="filter-select-menu"
+            >
+              {uniqueData.map((category, index) => (
+                <option key={index} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+          <form className="search-form">
+            <input 
+              type="search" 
+              placeholder="Search here ..." 
+              className="search-input"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <FaSearch className="search-icon" />
+          </form>
         </div>
-
 
         <div className="grid">
           {filteredApps.map((app, index) => (
             <div key={app.id} className="card" >
               <div className="card-content" data-aos="fade-right" data-aos-delay="200">
                 <div className="card-header">
-                  <img className="card-img" src={app.imgSrc} alt={app.title} ata-aos="fade-left" data-aos-delay="100"/>
+                  <img className="card-img" src={app.imgSrc} alt={app.title} data-aos="fade-left" data-aos-delay="100"/>
                   <div className="card-info">
                     <p className="card-title">{app.title}</p>
                     <p className="card-description">{app.description}</p>

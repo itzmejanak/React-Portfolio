@@ -22,14 +22,9 @@
     margin-right: auto;
     max-width: 1120px;
   }
-  .integration-section .container .filter-buttons {
-    display: flex;
-    gap: 0.7rem;
-    justify-content: flex-start;
-    margin-top: 2rem;
-  }
-  
-  .integration-section .container .filter-button {
+
+
+.integration-section .container .filter-select-menu {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: 500;
@@ -39,20 +34,24 @@
     border-radius: 0.375rem;
     cursor: pointer;
     transition: var(--transition);
-  }
-  
-  .integration-section .container .filter-button:hover,
-  .integration-section .container .filter-button:focus {
-    color: var(--foreground);
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+.integration-section .container .filter-select-menu:hover,
+.integration-section .container .filter-select-menu:focus {
     background-color: var(--primary);
     border-color: var(--primary);
-  }
-  
-  .integration-section .container .filter-button.active {
-    color: var(--foreground);
+}
+
+.integration-section .container .filter-select-menu:active {
     background-color: var(--primary-accent);
     border-color: var(--primary-accent);
-  }
+}
+
   
   .integration-section .container .integration-section .container .title {
     font-size: 1.875rem;
