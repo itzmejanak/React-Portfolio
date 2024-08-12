@@ -164,12 +164,10 @@
   /* Media Queries */
 
 /* Extra small devices (phones, 600px and below) */
-@media (max-width: 600px) {
-    .integration-section .container .filter-button {
-      margin-top: 20px;
-      padding: 0.3rem 1rem;
-      margin-bottom: 10px;
-      font-size: 0.75rem;
+@media (max-width: 670px) {
+    .integration-section .container .filter-search-container{
+      margin-top: 30px;   
+      margin-right: 0;
     }
 
     .integration-section .container .card-info .card-description{
@@ -185,11 +183,10 @@
   
   
   /* Large devices (laptops/desktops, 992px and up) */
-  @media (max-width: 992px) {
-    .integration-section .container .filter-button {
-      margin-bottom: 20px;
-      padding: 0.5rem .6rem;
-      font-size: 0.7rem;
+  @media (max-width: 1002px) {
+    .integration-section .container .filter-search-container{
+      margin-top: 30px;
+      margin-right: 20px;   
     }
 
     .integration-section .container .card-info .card-description{

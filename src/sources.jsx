@@ -796,6 +796,51 @@ export const appData = [
     "link": "https://www.mediafire.com/file/javua1x3y4knjwe/Text_Extractor_1.5.7_kill_sign.apk/file",
     "category": "Tools"
   },
+  {
+    "id": 39,
+    "imgSrc": "https://static.vecteezy.com/system/resources/previews/015/426/286/large_2x/apk-file-format-icon-apk-extension-filled-icon-free-vector.jpg",
+    "title": "GPT Notes",
+    "description": "Direct Integration",
+    "details": "A useful app for taking and organizing notes with GPT.",
+    "link": "https://www.mediafire.com/file/pwco5mb62uz3gee/GPT_Notes_3.5.0.0.apk/file",
+    "category": "Study"
+  },
+  {
+    "id": 40,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "CalWi",
+    "description": "Direct Integration",
+    "details": "Customize your calendar with this app.",
+    "link": "https://www.mediafire.com/file/2s9uty16pk4qhpc/CalWi_2.13.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 41,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "OS Widgets",
+    "description": "Direct Integration",
+    "details": "Add OS-style widgets to your Android device.",
+    "link": "https://www.mediafire.com/file/nczh1949r43a0ar/OS_Widgets_v4.0.0%25284000030%2529_antisplit_sign.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 42,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/10234/10234578.png",
+    "title": "Digital Clock Live Wallpaper & AOD",
+    "description": "Direct Integration",
+    "details": "A digital clock with live wallpaper and Always On Display.",
+    "link": "https://www.mediafire.com/file/8pxiny1oyfthzz7/Digital_Clock_Live_Wallpaper_%2526_AOD_9.0.apk/file",
+    "category": "Personalization"
+  },
+  {
+    "id": 43,
+    "imgSrc": "https://cdn-icons-png.flaticon.com/512/8108/8108760.png",
+    "title": "XPlayer - Video Player",
+    "description": "Direct Integration",
+    "details": "A powerful video player with support for all formats.",
+    "link": "https://www.mediafire.com/file/oe80s280kc2fv97/XPlayer_-_Video_Player_2.3.9.1.apk/file",
+    "category": "Music"
+  },
 ];
 
 
