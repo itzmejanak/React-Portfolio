@@ -17,6 +17,13 @@ import {SiExpress,SiMongodb} from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiAdobexd } from "react-icons/si";
+import { TiHtml5 } from "react-icons/ti";
+import { FaCss3Alt } from "react-icons/fa6";
+import { RiJavascriptFill } from "react-icons/ri";
+import { FaJava } from "react-icons/fa6";
+import { TbFileTypeXml } from "react-icons/tb";
+import { FaVolleyball } from "react-icons/fa6";
+import { FaGooglePlay } from "react-icons/fa";
 
 export const tabs = [
     {name:"About Me",id:'about'},
@@ -149,182 +156,187 @@ export const skills = [
 import React, { useState, useEffect } from 'react';
 
 export const projects = [
-  { 
-      id:1,
-      title: 'AI Powered School',
-      image: 'https://cdn.dribbble.com/userupload/10064191/file/original-091c06a630285b93a5f81e29e882fe3c.png',
-      category:"UI/UX",
-      description: `Transforming education with AI, our School UI Design project revolutionizes the 
-                      learning experience. Seamlessly integrating intelligent features, personalized interfaces, 
-                      and intuitive navigation, our design empowers educators and students alike. Experience 
-                      innovation at its finest as we pave the way for a smarter, more efficient educational 
-                      journey.`,
-      demoLink: "https://google.com/",
-      stack:[
+  {
+    id: 1,
+    title: 'Static Portfolio Website',
+    image: 'https://i.ibb.co/WVjS5Fx/1696927528936.jpg',
+    category: 'Web',
+    description: `A personal portfolio website showcasing my skills, projects, and experience.
+                  Built with a focus on design and smooth animations using GSAP.`,
+    demoLink: 'https://itzmejanak.github.io/my_best_Project/',
+    stack: [
       {
-          name:"XD",
-          icon: <SiAdobexd/>,
-          iconColor:"skyblue",
+        name: 'HTML',
+        icon: <TiHtml5 />,
+        iconColor: 'orange',
       },
-      ]
+      {
+        name: 'CSS',
+        icon: <FaCss3Alt />,
+        iconColor: 'blue',
+      },
+      {
+        name: 'JavaScript',
+        icon: <RiJavascriptFill />,
+        iconColor: 'yellow',
+      },
+      {
+        name: 'GSAP',
+        icon: <FaGooglePlay />,
+        iconColor: 'green',
+      }
+    ]
   },
   {
-      id:2,
-      title: 'E-Commerce Application',
-      image: 'https://cdn.dribbble.com/userupload/8002230/file/original-c8eec16edea4d5c836b2bfabe7fbaa5a.jpg',
-      category:"Web",
-      description:`Enhance your online shopping experience with our E-Commerce Application 
-      UI design project. Seamlessly blending aesthetics with functionality, our intuitive 
-      interface offers easy navigation, personalized recommendations, and secure 
-      transactions. Elevate your digital storefront and captivate customers with a visually 
-      stunning design tailored to your brand`,
-      demoLink: "https://google.com/",
-      stack:[
+    id: 2,
+    title: 'E-Commerce Application',
+    image: 'https://i.ibb.co/DMySgG0/photo-collage-png.png',
+    category: 'Web',
+    description: `An online store featuring a user-friendly interface, product catalog, 
+                  and shopping cart functionality. Optimized for performance and scalability.`,
+    demoLink: 'https://dainty-figolla-15a769.netlify.app/html/home',
+    stack: [
       {
-          name:"ReactJs",
-          icon: <DiReact/>,
-          iconColor:"skyblue",
+        name: 'HTML',
+        icon: <TiHtml5 />,
+        iconColor: 'orange',
       },
       {
-          name:"NodeJs",
-          icon: <FaNodeJs/>,
-          iconColor:"green",
+        name: 'CSS',
+        icon: <FaCss3Alt />,
+        iconColor: 'blue',
       },
       {
-          name:"ExpressJs",
-          icon: <SiExpress/>,
-      },
-      {
-          name:"MongoDB",
-          icon: <SiMongodb/>,
-          iconColor:"limegreen",
-      },
-      ]
+        name: 'JavaScript',
+        icon: <RiJavascriptFill />,
+        iconColor: 'yellow',
+      }
+    ]
   },
   {
-      id:3,
-      title: 'Robotic Engineering Web Application',
-      image: 'https://s3-alpha.figma.com/hub/file/5101537097/c4a1ed2c-4ab9-43fb-a248-d7ac6b0c3161-cover.png',
-      category:"Web",
-      description: `Unlock the future of robotics with our Robotic Engineering Web Application
-      project. Seamlessly integrating cutting-edge technology, data analytics, 
-      and collaborative tools, our platform empowers engineers to design, simulate, 
-      and optimize robotic systems. Experience innovation at its peak as we redefine the 
-      boundaries of robotic engineering.`,
-      demoLink: "https://google.com/",
-      stack:[
+    id: 3,
+    title: 'Last Projects',
+    image: 'https://i.ibb.co/kyKZXxP/1708631345443.jpg',
+    category: 'Web',
+    description: `A collection of my most recent projects, highlighting my growth and expertise 
+                  in web development.`,
+    demoLink: 'https://itzmejanak.github.io/my_best_Project/#portfolio',
+    stack: [
       {
-          name:"ReactJs",
-          icon: <DiReact/>,
-          iconColor:"skyblue",
+        name: 'HTML',
+        icon: <TiHtml5 />,
+        iconColor: 'orange',
       },
       {
-          name:"NodeJs",
-          icon: <FaNodeJs/>,
-          iconColor:"green",
+        name: 'CSS',
+        icon: <FaCss3Alt />,
+        iconColor: 'blue',
       },
       {
-          name:"ExpressJs",
-          icon: <SiExpress/>,
-      },
+        name: 'JavaScript',
+        icon: <RiJavascriptFill />,
+        iconColor: 'yellow',
+      }
+    ]
+  },
+  
+  {
+    id: 4,
+    title: 'Weather App',
+    image: 'https://i.ibb.co/WpkkDgp/Screenshot-2024-08-12-125722.png',
+    category: 'UI/UX',
+    description: `A clean and intuitive design for a weather app, showcasing the forecast with engaging visuals.`,
+    demoLink: 'https://github.com/itzmejanak/Android-Studio/blob/main/Android%20Studio/_00_Learnings/_00_Diagrams/Adobe/WeatherApp.xd',
+    stack: [
       {
-          name:"MongoDB",
-          icon: <SiMongodb/>,
-          iconColor:"limegreen",
-      },
-      {
-          name:"MongoDBT",
-          icon: <SiMongodb/>,
-      },
-      {
-          name:"MongoDBT",
-          icon: <SiMongodb/>,
-      },
-      {
-          name:"MongoDBT",
-          icon: <SiMongodb/>,
-      },
-      ]
+        name: 'XD',
+        icon: <SiAdobexd />,
+        iconColor: 'skyblue',
+      }
+    ]
   },
   {
-      id:4,
-      title: 'Project Management application',
-      image: 'https://miro.medium.com/v2/resize:fit:1400/1*6iO0wm8q4cByvxY6kB9WiQ.png',
-      category:"Apps",
-      description: `Simplify project coordination with our intuitive Project Management application. Track tasks, collaborate in real-time, and streamline workflows effortlessly. With customizable features and robust reporting, stay organized and efficient.
-                      Elevate your project management experience and achieve success with ease.`,
-      demoLink: "https://google.com/",
-      stack:[
+    id: 5,
+    title: 'Music App',
+    image: 'https://i.ibb.co/5Ln3QnH/Screenshot-2024-08-12-130622.png',
+    category: 'UI/UX',
+    description: `A modern and sleek music app design, optimized for user experience and easy navigation.`,
+    demoLink: 'https://github.com/itzmejanak/Android-Studio/blob/main/Android%20Studio/_00_Learnings/_00_Diagrams/Adobe/_03_Music_Player.xd',
+    stack: [
       {
-          name:"React Native",
-          icon: <TbBrandReactNative/>,
-          iconColor:"skyblue",
+        name: 'XD',
+        icon: <SiAdobexd />,
+        iconColor: 'skyblue',
+      }
+    ]
+  },
+
+  {
+    id: 6,
+    title: 'Music App',
+    image: 'https://i.ibb.co/42HjSrs/1719171800036.jpg',
+    category: 'Apps',
+    description: `An advanced music application featuring a sleek design and smooth playback, built using Java and XML.`,
+    demoLink: 'https://github.com/itzmejanak/Android-Studio/tree/main/Android%20Studio/_01_Projects/_05_MusicApp/MusicPlus',
+    stack: [
+      {
+        name: 'Java',
+        icon: <FaJava />, 
+        iconColor: 'orange',
       },
       {
-          name:"NodeJs",
-          icon: <FaNodeJs/>,
-          iconColor:"green",
-      },
-      {
-          name:"ExpressJs",
-          icon: <SiExpress/>,
-      },
-      {
-          name:"MongoDB",
-          icon: <SiMongodb/>,
-          iconColor:"limegreen",
-      },
-      ]
+        name: 'XML',
+        icon: <TbFileTypeXml />,  
+        iconColor: 'blue',
+      }
+    ]
   },
   {
-      id:5,
-      title: 'Mobile bank - App Design',
-      image: 'https://i.pinimg.com/originals/a0/be/c3/a0bec3706210e6ab28470eee95bf5889.png',
-      category:"UI/UX",
-      description: `Experience banking at your fingertips with our sleek Mobile Bank app design. Seamlessly manage your finances on-the-go with intuitive navigation, secure transactions, and personalized insights. Enjoy a modern interface that prioritizes convenience and accessibility, revolutionizing your banking experience.`,
-      demoLink: "https://google.com/",
-      stack:[
+    id: 7,
+    title: 'Weather App',
+    image: 'https://i.ibb.co/QrCVhT4/1719238975432.jpg',
+    category: 'Apps',
+    description: `A real-time weather application utilizing the Volley library for network requests, crafted with Java and XML.`,
+    demoLink: 'https://github.com/itzmejanak/Android-Studio/tree/main/Android%20Studio/_01_Projects/_07_WeatherApp',
+    stack: [
       {
-          name:"Figma",
-          icon: <CgFigma/>,
-          iconColor:"orangered",
+        name: 'Java',
+        icon: <FaJava />, 
+        iconColor: 'orange',
       },
-      ]
+      {
+        name: 'XML',
+        icon: <TbFileTypeXml />,
+        iconColor: 'blue',
+      },
+      {
+        name: 'Volley Library',
+        icon: <FaVolleyball />,  
+        iconColor: 'red',
+      }
+    ]
   },
   {
-      id:6,
-      title: 'Quiz App Development',
-      image: 'https://i.pinimg.com/originals/b3/35/02/b33502e465346ace2a7f1df203d851a3.jpg',
-      category:"Apps",
-      description: `Elevate engagement and knowledge retention with our Quiz App 
-                      Development project. Seamlessly crafted for interactive learning 
-                      experiences, our app offers customizable quizzes, real-time feedback, 
-                      and captivating visuals. Empower users to test their knowledge anytime,
-                      anywhere, fostering a dynamic learning environment tailored to their 
-                      needs.`,
-      demoLink: "https://google.com/",
-      stack:[
+    id: 8,
+    title: 'Calculator App',
+    image: 'https://i.ibb.co/8jsRx8j/Screenshot-2024-08-12-131619.png',
+    category: 'Apps',
+    description: `A basic yet functional calculator application, developed with Java and XML for Android devices.`,
+    demoLink: 'https://github.com/itzmejanak/Android-Studio/tree/main/Android%20Studio/_01_Projects/_03_Calculator',
+    stack: [
       {
-          name:"React Native",
-          icon: <TbBrandReactNative/>,
-          iconColor:"skyblue",
+        name: 'Java',
+        icon: <FaJava />,  
+        iconColor: 'orange',
       },
       {
-          name:"NodeJs",
-          icon: <FaNodeJs/>,
-          iconColor:"green",
-      },
-      {
-          name:"ExpressJs",
-          icon: <SiExpress/>,
-      },
-      {
-          name:"MongoDB",
-          icon: <SiMongodb/>,
-          iconColor:"limegreen",
-      },
-      ]
+        name: 'XML',
+        icon: <TbFileTypeXml />,
+        iconColor: 'blue',
+      }
+    ]
   },
+
 ]
 
 export const clients = [
