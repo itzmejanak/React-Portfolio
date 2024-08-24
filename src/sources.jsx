@@ -1102,6 +1102,77 @@ export const pdfData = [
     newPrice: "Free",
     downloadLink: "https://www.dropbox.com/scl/fi/k7fcfz92rl7hfmyb0zfyo/Top-AI-Tools-That-Changed-the-Game-in-Digital-Marketing.pdf?rlkey=vksqj7ncmm4ogc4e0uldtg42x&st=629woqb6&dl=0",
     category: "AI"
+  },
+
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "Java",
+    itemName: "Advance Java For Beginners",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/3z39wk9fg38n72cnarfye/Advanve-Java-For-Beginers.pdf?rlkey=c0xd50c4icvgrwloazc165wap&st=a3ize1r4&dl=0",
+    category: "Java"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "Java",
+    itemName: "Android Development For Beginners Using Java",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/p1gdr2p6meymphv9mnkje/Android-Development-For-Begeners-Using-Java.pdf?rlkey=a5h187nmdh4kh950mhus5w2at&st=66jdexov&dl=0",
+    category: "Java"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "Java",
+    itemName: "Django",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/c16bfrv2zi0lzn7kfczpu/Django.pdf?rlkey=5woplkiyo0ez3ua5peoip10d5&st=zo7vbz5d&dl=0",
+    category: "Java"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "Java",
+    itemName: "Java For Beginners",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/4hd3foy6o0f17luj7jozs/Java-For-Beginers.pdf?rlkey=f7xdxkn0w7stf2cbsvdawhzyq&st=wv0tp6a2&dl=0",
+    category: "Java"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "JavaScript",
+    itemName: "JavaScript For Beginners: Basic To Advance",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/wscxvyyx9x8l7xb15mbku/Java-Script-For-Beginers-Basic-To-Advance.pdf?rlkey=dgdh5xqmlxzhj5bt9ryciwabn&st=i3mef1fs&dl=0",
+    category: "JavaScript"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "Python",
+    itemName: "Python For Beginners: Basics To Advance",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/n64tz2rn9q7sarqyadoev/Python-For-Beginers-Basics-To-Advance.pdf?rlkey=plrm43tueh63og6sobrp07syf&st=ong0mfmr&dl=0",
+    category: "Python"
+  },
+  {
+    imgSrc: "https://imgs.search.brave.com/2KToG_g2VLdFVZEDGwIg3jaKgciAJ6qGxyXPYD2qq60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzY2LzY5Lzk4/LzM2MF9GXzc2NjY5/OTgwNV9qM2hxZHVS/dmtqNmpGVEJrZ0Y5/b0hISFNqMGNXN2tI/Uy5qcGc",
+    altText: "Default image",
+    discount: "REST Framework",
+    itemName: "REST Framework For Beginners",
+    oldPrice: "$20.50",
+    newPrice: "Free",
+    downloadLink: "https://www.dropbox.com/scl/fi/vc0ekkob08nmrj88q80ja/Rest-FrameWork-For-Begenners.pdf?rlkey=tbrx0o6221l644qy7ngnx4jkv&st=calmymbk&dl=0",
+    category: "REST Framework"
   }
 
 ];
