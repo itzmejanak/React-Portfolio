@@ -25,21 +25,21 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <div class="bot-status">
-                            <h2>DeepSeek</h2>
+                            <select id="chatModelSelect">
+                                <option value="chatGPT4">ChatGPT-4</option>
+                                <option value="deepSeek">Deep Seek</option>
+                            </select>
                             <span class="status">Online</span>
                         </div>
+                        
                     </div>
                     <div class="header-actions">
-                        <button id="newChatButton" class="icon-button" title="New Chat">
-                            <i class="fas fa-plus"></i>
-                        </button>
                         <button id="themeToggle" class="icon-button" title="Toggle Theme">
                             <i class="fas fa-moon"></i>
                         </button>
-                        <select id="chatModelSelect">
-                            <option value="chatGPT4">ChatGPT-4</option>
-                            <option value="deepSeek">Deep Seek</option>
-                        </select>
+                            <button id="newChatButton" class="icon-button" title="New Chat">
+                                <i class="fas fa-plus"></i>
+                            </button>
                     </div>
                 </div>
             </div>
