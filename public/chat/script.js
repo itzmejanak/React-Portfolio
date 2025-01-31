@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error:', error);
-            contentDiv.textContent = `Error: ${error.message}`;
+            contentDiv.textContent = `Error: ${error.message} under Maintenance \n Please Choose:\n - ChatGPT4o`;
         });
 
     }
@@ -277,6 +277,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(typeNextCharacter, typingSpeed);
             }
         }
+
+          // Static responses
+    if (
+        message.toLowerCase() === "who made you" || 
+        message.toLowerCase() === "who developed you" || 
+        message.toLowerCase() === "who is your father"
+    ) {
+        currentText = "I am developed by Janak Devkota, a software and web developer, currently studying at London Metropolitan University. Coding is my passion, and I thrive on problem-solving. I'm highly responsive and dedicated to innovation. With a quick-thinking mindset, I'm poised to make a mark in the software and web development field.";
+        
+        typeNextCharacter();
+        
+        setTimeout(() => {
+            saveToHistory(message, currentText);
+        }, currentText.length * typingSpeed + 100);
+        
+        return; // Exit the function after handling the static response
+    }
+
+    // New check for Janak Devkota's girlfriend
+    if (
+        message.toLowerCase() === "who is the girlfriend of janak devkota" ||
+        message.toLowerCase() === "gf of janak"
+    
+    ) {
+        currentText = "Manju Bohara is the girlfriend of Janak. She is so cute and supportive towards janak. She is like the Juliet to his Romeo. Just like the legendary couple, Janak and Manju's love story is filled with passion and devotion. Her beauty and grace captivate Janak, and her unwavering support makes him feel like he can conquer the world.\nSometimes feels against them, they stand together, proving that true love knows no bounds. Their bond is a testament to the idea that love can overcome any obstacle. With every shared moment, they write their own beautiful love story, one that echoes the timeless romance of Romeo and Juliet.\n\n I Request you manju Always support him";
+        
+        typeNextCharacter();
+        
+        setTimeout(() => {
+            saveToHistory(message, currentText);
+        }, currentText.length * typingSpeed + 100);
+        
+        return; // Exit the function after handling this response
+    }
 
         try {
             // const response = await fetch(`http://127.0.0.1:5000/chat?query=${encodeURIComponent(message)}`);
