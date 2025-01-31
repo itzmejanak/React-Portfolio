@@ -428,6 +428,7 @@ export const footer = [
     title:"Explore",
     routes:[
       {name:"Apps",id:'apps'},
+      {name:"ChatGPT4o",id:'chatgpt4o'},
       {name:"E-Books",id:'e-book'},
       {name:"SourceCode",id:'source-code'},
     ]
@@ -449,18 +450,6 @@ export const footer = [
       ]
     },
 ]
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 export const appData = [

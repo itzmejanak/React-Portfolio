@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,6 +15,7 @@ import Footer from './Components/Footer';
 import PDF from './Components/PDF';
 import ThemeSwitcher from './Commons/ThemeSwitcher';
 import Apps from './Components/Apps';
+import Chat4 from './Components/Chat/Chat4';
 
 const MainPage = () => (
   <>
@@ -36,18 +37,30 @@ function App() {
     });
   }, []);
 
+  const location = useLocation();
+
+  // Check if the current path is the chat route
+  const isChatRoute = location.pathname === '/chatgpt4o';
+
   return (
-    <Router>
+    <>
       <ThemeSwitcher />
-      <Navbar />
+      {!isChatRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/e-book" element={<PDF />} />
         <Route path="/apps" element={<Apps />} />
+        <Route path="/chatgpt4o" element={<Chat4 />} />
       </Routes>
-      <Footer />
-    </Router>
+      {!isChatRoute && <Footer />}
+    </>
   );
 }
 
-export default App;
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;
