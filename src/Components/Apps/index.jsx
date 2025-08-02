@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import { appData } from '../../sources';
-import { FaSearch } from 'react-icons/fa'; // Import the search icon
+import { usePortfolioData } from '../../sources';
+import { FaSearch } from 'react-icons/fa';
 import './Apps.css';
+import Loading from '../Loading';
 
 const Apps = () => {
+  const { data: appData, loading, error } = usePortfolioData('appData');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+
   const removeDuplicates = (arr) => {
+    if (!arr || arr.length === 0) return ['All'];
+    
     const uniqueCategories = new Set();
     uniqueCategories.add("All");
     arr.forEach((item) => {
@@ -14,13 +21,34 @@ const Apps = () => {
   };
   
   const uniqueData = removeDuplicates(appData);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredApps = appData.filter(app => 
+  const filteredApps = appData ? appData.filter(app => 
     (selectedCategory === 'All' || app.category === selectedCategory) &&
     app.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  ) : [];
+
+  if (loading) {
+    return (
+      <section className="integration-section">
+        <div className="container">
+          <Loading size="large" text="Loading applications..." />
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="integration-section">
+        <div className="container">
+          <div className="flex-center" style={{ minHeight: '300px', flexDirection: 'column', gap: '15px' }}>
+            <div style={{ color: 'var(--destructive)', fontSize: '18px' }}>⚠️ Unable to load applications</div>
+            <div style={{ color: 'var(--muted-foreground)', fontSize: '14px' }}>{error}</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="integration-section">
@@ -72,7 +100,7 @@ const Apps = () => {
         </div>
 
         <div className="text-center">
-          <a href="#" className="link">Check all 1,593 applications</a>
+          <a href="#" className="link">Check all {filteredApps.length} applications</a>
         </div>
       </div>
     </section>

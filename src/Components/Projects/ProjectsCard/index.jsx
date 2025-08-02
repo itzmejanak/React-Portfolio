@@ -21,7 +21,7 @@ const ProjectsCard = ({ title, image, description, stack, demoLink, className })
                     <div className="stack-right">
                         <div className="stack-box-container">
                             {
-                                stack.map((list, index) => (
+                                stack && Array.isArray(stack) ? stack.map((list, index) => (
                                     <div className="stack-box" key={index}>
                                         <div className="stack-icon-container">
                                             <span 
@@ -33,7 +33,11 @@ const ProjectsCard = ({ title, image, description, stack, demoLink, className })
                                             <span className="stack-name">{list.name}</span>
                                         </div>
                                     </div>
-                                ))
+                                )) : (
+                                    <div className="stack-box">
+                                        <span className="muted">No stack information</span>
+                                    </div>
+                                )
                             }
                         </div>
                     </div>

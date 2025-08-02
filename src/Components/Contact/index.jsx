@@ -1,7 +1,34 @@
 import React from 'react'
 import './Contact.css'
-import { contactOptions } from '../../sources'
+import { usePortfolioData } from '../../sources'
+import Loading from '../Loading'
+
 const Contact = () => {
+  const { data: contactOptions, loading, error } = usePortfolioData('contactOptions');
+
+  if (loading) {
+    return (
+      <section id='contact' data-aos="fade-zoom-in">
+        <div className="wrapper">
+          <Loading size="medium" text="Loading contact information..." />
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id='contact' data-aos="fade-zoom-in">
+        <div className="wrapper">
+          <div className="flex-center" style={{ minHeight: '200px', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ color: 'var(--destructive)', fontSize: '16px' }}>⚠️ Unable to load contact information</div>
+            <div style={{ color: 'var(--muted-foreground)', fontSize: '14px' }}>{error}</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id='contact' data-aos="fade-zoom-in">
       <div className="wrapper">

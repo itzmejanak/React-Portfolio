@@ -1,13 +1,15 @@
 import React, { useRef } from 'react';
 import './Testimonials.css';
 import Slider from 'react-slick';
-import { clients } from '../../sources';
+import { usePortfolioData } from '../../sources';
 import { FaStar } from 'react-icons/fa6';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import Loading from '../Loading';
 
 const Testimonials = () => {
+  const { data: clients, loading, error } = usePortfolioData('clients');
   const sliderRef = useRef(null);
 
   const settings = {
@@ -27,6 +29,41 @@ const Testimonials = () => {
       }
     ]
   };
+
+  if (loading) {
+    return (
+      <section id='testimonials'>
+        <div className="wrapper" data-aos="fade-left">
+          <div className="section-header">
+            <h1 className="heading-1" data-aos="fade-left">
+              <span className="gradient-text">Testimonials</span>
+            </h1>
+            <h4 className="sub-title" data-aos="fade-left" data-aos-delay="400">What my clients are saying</h4>
+          </div>
+          <Loading size="medium" text="Loading testimonials..." />
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id='testimonials'>
+        <div className="wrapper" data-aos="fade-left">
+          <div className="section-header">
+            <h1 className="heading-1" data-aos="fade-left">
+              <span className="gradient-text">Testimonials</span>
+            </h1>
+            <h4 className="sub-title" data-aos="fade-left" data-aos-delay="400">What my clients are saying</h4>
+          </div>
+          <div className="flex-center" style={{ minHeight: '200px', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ color: 'var(--destructive)', fontSize: '16px' }}>⚠️ Unable to load testimonials</div>
+            <div style={{ color: 'var(--muted-foreground)', fontSize: '14px' }}>{error}</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id='testimonials'>

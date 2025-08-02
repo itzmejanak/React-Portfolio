@@ -1,60 +1,68 @@
 import React, { useState, useEffect } from 'react'
 import './Achivement.css'
 import Odometer from 'react-odometerjs'
+import { usePortfolioData } from '../../sources'
+import Loading from '../../Components/Loading'
 
 const Achivement = () => {
-    const [exprience, setExprience] = useState(0)
-    const [clients, setClients] = useState(0)
-    const [projects, setProjects] = useState(0)
+    const { data: achievements, loading, error } = usePortfolioData('achievements');
+    const [animatedValues, setAnimatedValues] = useState({});
 
-    useEffect(()=>{
-        const timeOutId =setTimeout(() => {
-            setClients(471)
-            setExprience(6)
-            setProjects(1.2)
+    useEffect(() => {
+        if (achievements && achievements.length > 0) {
+            // Initialize all values to 0
+            const initialValues = {};
+            achievements.forEach((achievement, index) => {
+                initialValues[index] = 0;
+            });
+            setAnimatedValues(initialValues);
+
+            // Animate to actual values after 3 seconds
+            const timeOutId = setTimeout(() => {
+                const finalValues = {};
+                achievements.forEach((achievement, index) => {
+                    finalValues[index] = achievement.value;
+                });
+                setAnimatedValues(finalValues);
+            }, 3000);
 
             return () => clearTimeout(timeOutId);
-        }, 3000);
-    }, [])
+        }
+    }, [achievements]);
 
-  return (
-    <div className='achivement-container'>
-
-        <div className="card">
-            <div className="flex-center">
-                <Odometer value={exprience} className='title'/>
-                <h1 className="title">+</h1>
+    if (loading) {
+        return (
+            <div className='achivement-container'>
+                <Loading size="small" text="Loading achievements..." />
             </div>
-            <p className="muted name">
-                Years of Exprience
-            </p>
-        </div>
+        );
+    }
 
-        <div className="card">
-            <div className="flex-center">
-                <Odometer value={clients} className='title'/>
-                <h1 className="title">+</h1>
+    if (error) {
+        return (
+            <div className='achivement-container'>
+                <div style={{ color: 'var(--destructive)', fontSize: '14px', textAlign: 'center' }}>
+                    ⚠️ Unable to load achievements
+                </div>
             </div>
-            <p className="muted name">
-                Clients Wroldwide
-            </p>
+        );
+    }
+
+    return (
+        <div className='achivement-container'>
+            {achievements.map((achievement, index) => (
+                <div className="card" key={achievement.id || index}>
+                    <div className="flex-center">
+                        <Odometer value={animatedValues[index] || 0} className='title'/>
+                        <h1 className="title">{achievement.suffix}</h1>
+                    </div>
+                    <p className="muted name">
+                        {achievement.title}
+                    </p>
+                </div>
+            ))}
         </div>
-
-
-        <div className="card">
-            <div className="flex-center">
-                <Odometer value={projects} className='title'/>
-                <h1 className="title">k+</h1>
-            </div>
-            <p className="muted name">
-                Completed Projects
-            </p>
-        </div>
-
-
-
-    </div>
-  )
+    )
 }
 
 export default Achivement

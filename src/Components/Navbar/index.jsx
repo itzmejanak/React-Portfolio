@@ -1,13 +1,27 @@
 import React, {useState} from 'react'
 import "./Navbar.css"
-import {tabs} from '../../sources'
+import { usePortfolioData } from '../../sources'
 import {Link} from 'react-scroll'
 import Logo from '../../Commons/Logo'
 import { HiMenu } from 'react-icons/hi'
 import { FaTimes } from 'react-icons/fa'
 import SocialHandles from '../../Commons/SocialHandles'
+import Loading from '../Loading'
+
 const Navbar = () => {
+  const { data: tabs, loading, error } = usePortfolioData('tabs');
   const [openSidebar, setOpenSide] = useState(false);
+
+  // Use fallback tabs if loading or error
+  const fallbackTabs = [
+    {name:"About Me",id:'about'},
+    {name:"Skill",id:'skill'},
+    {name:"Services",id:'services'},
+    {name:"Projects",id:'projects'},
+    {name:"Testimonials",id:'testimonials'},
+  ];
+
+  const navigationTabs = loading || error ? fallbackTabs : tabs;
 
   return (
     <nav className='navbar flex'>
@@ -17,8 +31,12 @@ const Navbar = () => {
         <div className="flex-center icon-wrapper cancel-btn" onClick={()=>setOpenSide(!openSidebar)}>
           <FaTimes/>
         </div>
-        {
-          tabs.map((tab, index)=>(
+        {loading ? (
+          <div style={{ padding: '20px' }}>
+            <Loading minimal={true} />
+          </div>
+        ) : (
+          navigationTabs.map((tab, index)=>(
             <Link 
             to={tab.id} 
             smooth = {true} 
@@ -30,7 +48,7 @@ const Navbar = () => {
             {tab.name}
             </Link>
           ))
-        }
+        )}
       </div>
       <SocialHandles/>
       <div className="box flex-center buttons">

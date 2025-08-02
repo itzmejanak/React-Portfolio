@@ -2,11 +2,50 @@ import React from 'react'
 import './Footer.css'
 import Logo from '../../Commons/Logo'
 import SocialHandles from '../../Commons/SocialHandles'
-import { footer } from '../../sources'
+import { usePortfolioData } from '../../sources'
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import Loading from '../Loading'
 
 const Footer = () => {
+  const { data: footer, loading, error } = usePortfolioData('footer');
+
+  if (loading) {
+    return (
+      <section id='footer'>
+        <div className="wrapper">
+          <div className="column" data-aos="fade-right">
+            <RouterLink to="/"><Logo/></RouterLink>
+            <SocialHandles/>
+          </div>
+          <Loading minimal={true} />
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id='footer'>
+        <div className="wrapper">
+          <div className="column" data-aos="fade-right">
+            <RouterLink to="/"><Logo/></RouterLink>
+            <SocialHandles/>
+          </div>
+          <div className="column">
+            <div style={{ color: 'var(--muted-foreground)', fontSize: '14px' }}>
+              Unable to load footer links
+            </div>
+          </div>
+        </div>
+        <div className="copyright flex-center" data-aos="fade-left">
+          <h4>Copyright &copy; All rights reserved - 2024</h4>
+          <p className="muted">Built with love 💚 by Janak Devkota</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id='footer'>
       <div className="wrapper">

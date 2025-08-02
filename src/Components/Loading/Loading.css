@@ -1,0 +1,278 @@
+/* Loading Container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  min-height: 200px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner.small {
+  width: 30px;
+  height: 30px;
+}
+
+.loading-spinner.medium {
+  width: 50px;
+  height: 50px;
+}
+
+.loading-spinner.large {
+  width: 70px;
+  height: 70px;
+}
+
+/* Spinner Rings */
+.spinner-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary);
+  animation: spin 1.5s linear infinite;
+}
+
+.loading-spinner.small .spinner-ring {
+  width: 30px;
+  height: 30px;
+}
+
+.loading-spinner.medium .spinner-ring {
+  width: 50px;
+  height: 50px;
+}
+
+.loading-spinner.large .spinner-ring {
+  width: 70px;
+  height: 70px;
+}
+
+.spinner-ring:nth-child(1) {
+  animation-duration: 1.5s;
+  border-top-color: var(--primary);
+}
+
+.spinner-ring:nth-child(2) {
+  animation-duration: 2s;
+  animation-direction: reverse;
+  border-top-color: var(--primary-accent);
+  transform: scale(0.8);
+}
+
+.spinner-ring:nth-child(3) {
+  animation-duration: 2.5s;
+  border-top-color: var(--muted-foreground);
+  transform: scale(0.6);
+  opacity: 0.7;
+}
+
+/* Spinner Core */
+.spinner-core {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loading-spinner.small .spinner-core {
+  width: 4px;
+  height: 4px;
+}
+
+.loading-spinner.large .spinner-core {
+  width: 12px;
+  height: 12px;
+}
+
+/* Loading Text */
+.loading-text {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* Minimal Loading (for inline use) */
+.loading-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: dotBounce 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .loading-container {
+    padding: 20px 10px;
+    min-height: 150px;
+    gap: 15px;
+  }
+
+  .loading-text {
+    font-size: 12px;
+  }
+
+  .loading-spinner.medium {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loading-spinner.medium .spinner-ring {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loading-spinner.medium .spinner-core {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Section Loading Overlay */
+.section-loading {
+  position: relative;
+  min-height: 200px;
+}
+
+.section-loading .loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-primary);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+/* Skeleton Loading Alternative */
+.skeleton-loading {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.skeleton-item {
+  height: 20px;
+  background: var(--bg-muted);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--bg-accent),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.skeleton-item.short {
+  width: 60%;
+}
+
+.skeleton-item.medium {
+  width: 80%;
+}
+
+.skeleton-item.long {
+  width: 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
