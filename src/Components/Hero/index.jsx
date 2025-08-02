@@ -10,8 +10,8 @@ const Hero = () => {
             <div className="wrapper info-container">
                 <div className="column">
                     <h3 className='sub-title' data-aos="fade-right">
-                        Hi, I'am
-                        <span className='primary'>Janak Devkota</span>
+                        Hi, I'am 
+                        <span className='primary'>  Janak Devkota</span>
                     </h3>
                     <h1 className="heading-1" data-aos="fade-up">
                         A
