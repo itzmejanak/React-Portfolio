@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from "react";
+import { StackField } from "./StackField";
 import { Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
@@ -57,8 +58,9 @@ function WorkChapter() {
   const [filter, setFilter] = useState("All");
   const categories = useMemo(() => ["All", ...Array.from(new Set(projects.map(p => p.category).filter(Boolean)))], [projects]);
   const visible = [...(filter === "All" ? projects : projects.filter(p => p.category === filter))].sort((a, b) => a.id - b.id);
-  const featured = visible.slice(0, 2);
-  const rest = visible.slice(2);
+  const flagged = visible.filter(p => p.featured).sort((a, b) => (a.order ?? 999) - (b.order ?? 999) || a.id - b.id);
+  const featured = flagged.length ? flagged : visible.slice(0, 2);
+  const rest = visible.filter(p => !featured.includes(p));
    return <section id="work" className="home-chapter work-chapter"><PortraitStage scene="work" mode="scroll" /><div className="home-wrap"><Chapter number="02" title="Selected work" aside="Selected work / archive" /><Entrance className="work-heading"><h2>Selected <em>work.</em></h2><p>{String(visible.length).padStart(2, "0")} projects <ArrowDownRight size={18} aria-hidden="true" /></p></Entrance>
     <div className="work-filter" role="group" aria-label="Filter projects">{categories.map(category => <Button key={category} type="button" variant="ghost" aria-pressed={filter === category} onClick={() => setFilter(category)} className={`work-filter-button ${filter === category ? "is-active" : ""}`}>{category}</Button>)}</div>
     <div className="featured-grid">{featured.map((project, i) => <Entrance className={`featured-project ${i === 1 ? "featured-offset" : ""}`} key={project.slug} delay={i * 0.12}><Link to="/projects/$slug" params={{ slug: project.slug }} className="project-link"><ProjectVisual project={project} /><div className="project-meta"><div><span>{String(i + 1).padStart(2, "0")} / {project.category}</span><h3>{project.title}</h3><p>{project.description}</p></div><ArrowUpRight size={24} strokeWidth={1.5} aria-hidden="true" /></div></Link><div className="project-stack">{project.stack?.slice(0, 4).map(s => <span key={s}>{s}</span>)}</div></Entrance>)}</div>
@@ -80,7 +82,7 @@ function ApproachChapter() {
 function CapabilityChapter() {
   const { data: groups = [] } = useQuery(collectionQuery<Skill>("skills"));
   const { data: services = [] } = useQuery(collectionQuery<Service>("services"));
-  return <section id="skill" className="home-chapter capability-chapter"><div className="home-wrap"><Chapter number="05" title="Skills & services" aside="Tools / capabilities" /><div className="chapter-split"><Entrance className="capability-intro"><p className="section-overline">THE TOOLKIT</p><h2 className="chapter-title">What I <em>bring.</em></h2><p>From the first idea to the final detail.</p></Entrance><div className="skills-index">{groups.map((group,i) => <Entrance key={group.title} className="skill-group"><span className="row-index">{String(i+1).padStart(2,"0")} / {group.title}</span><div>{group.data?.map(entry => <span key={entry.skill} title={entry.level}>{entry.skill}<small>{entry.level}</small></span>)}</div></Entrance>)}</div></div>
+  return <section id="skill" className="home-chapter capability-chapter"><div className="home-wrap"><Chapter number="05" title="Skills & services" aside="Tools / capabilities" /><div className="chapter-split"><Entrance className="capability-intro"><p className="section-overline">THE TOOLKIT</p><h2 className="chapter-title">What I <em>bring.</em></h2><p>From the first idea to the final detail.</p><StackField names={groups.flatMap(g => g.data?.map(d => d.skill) ?? [])} /></Entrance><div className="skills-index">{groups.map((group,i) => <Entrance key={group.title} className="skill-group"><span className="row-index">{String(i+1).padStart(2,"0")} / {group.title}</span><div>{group.data?.map(entry => <span key={entry.skill} title={entry.level}>{entry.skill}<small>{entry.level}</small></span>)}</div></Entrance>)}</div></div>
     <div id="services" className="services-band"><Entrance className="services-heading"><span className="section-overline">SERVICES</span><h2>How we can <em>build together.</em></h2></Entrance><div className="service-list">{services.map((service,i) => <Entrance key={service.name} className="service-row"><span className="row-index">S / {String(i+1).padStart(2,"0")}</span><div><h3>{service.name}</h3><p>{service.description?.replace(/^`/, "")}</p></div><Icon name={service.icon} size={24} className="text-ember" /></Entrance>)}</div></div>
   </div></section>;
 }

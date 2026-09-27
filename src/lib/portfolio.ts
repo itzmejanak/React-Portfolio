@@ -44,6 +44,8 @@ export type Skill = { title: string; data: { skill: string; level: string }[] };
 export type Project = {
   id: number;
   slug: string;
+  featured?: boolean;
+  order?: number;
   title: string;
   image?: string;
   category: string;

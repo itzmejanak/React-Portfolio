@@ -143,3 +143,24 @@ export const adminCollection = createServerFn({ method: "GET" })
     await requireAdmin();
     return (await rdList(PORTFOLIO, data.name)) as unknown as Array<Record<string, JsonValue>>;
   });
+
+export const adminSaveCollection = createServerFn({ method: "POST" })
+  .inputValidator((d: unknown) =>
+    z
+      .object({
+        name: z.enum(PUBLIC_COLLECTIONS),
+        records: z.array(z.record(z.string(), z.unknown())).max(500),
+      })
+      .parse(d),
+  )
+  .handler(async ({ data }) => {
+    await requireAdmin();
+    const clean = data.records.map(({ createdAt: _c, updatedAt: _u, ...rest }) => rest);
+    try {
+      await rdReplace(PORTFOLIO, data.name, clean);
+      return { ok: true as const };
+    } catch (e) {
+      console.error("save failed", data.name, e);
+      return { ok: false as const, error: "The backend rejected the save. Please try again." };
+    }
+  });

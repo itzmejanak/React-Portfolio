@@ -4,7 +4,6 @@ import { useServerFn } from "@tanstack/react-start";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
-  adminCollection,
   adminLogin,
   adminLogout,
   adminSetup,
@@ -15,6 +14,8 @@ import {
   type MessageRow,
 } from "@/lib/revdb.functions";
 import { Skeleton } from "@/components/motion/Reveal";
+import { CollectionEditor } from "@/components/admin/CollectionEditor";
+import { SECTIONS } from "@/lib/admin-schema";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
@@ -214,27 +215,19 @@ function Messages() {
 }
 
 function Content() {
-  const get = useServerFn(adminCollection);
   const [name, setName] = useState<(typeof PUBLIC_COLLECTIONS)[number]>("profile");
-  const { data, isLoading } = useQuery({ queryKey: ["admin", "content", name], queryFn: () => get({ data: { name } }) });
   return (
     <div className="grid gap-6 md:grid-cols-12">
-      <div className="flex flex-wrap gap-2 md:col-span-3 md:flex-col">
+      <nav aria-label="Sections" className="flex flex-wrap gap-1 md:col-span-3 md:flex-col md:border-r md:border-edge md:pr-4">
         {PUBLIC_COLLECTIONS.map((c) => (
-          <button key={c} onClick={() => setName(c)}
-            className={`rounded-lg px-3 py-2 text-left font-mono text-[11px] ${c === name ? "bg-ember text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>
-            {c}
+          <button key={c} type="button" onClick={() => setName(c)}
+            className={`border-l-2 px-3 py-2 text-left text-sm ${c === name ? "border-ember bg-secondary text-foreground" : "border-transparent text-muted-foreground hover:text-foreground"}`}>
+            {SECTIONS[c].label}
           </button>
         ))}
-      </div>
-      <div className="md:col-span-9">
-        {isLoading ? (
-          <Skeleton className="h-96" />
-        ) : (
-          <pre className="plate max-h-[70vh] overflow-auto p-5 font-mono text-[11px] leading-relaxed text-muted-foreground">
-            {JSON.stringify(data, null, 2)}
-          </pre>
-        )}
+      </nav>
+      <div className="min-w-0 md:col-span-9">
+        <CollectionEditor key={name} name={name} />
       </div>
     </div>
   );
