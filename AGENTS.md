@@ -15,5 +15,9 @@
 ## Home presentation
 - Keep the kinetic editorial home continuation isolated in `HomeEditorial.tsx` while inner pages retain their existing section components, so homepage redesigns cannot accidentally alter other routes.
 - Use real project imagery only when a project provides it; the local Katha preview is a screenshot of the live public project, while other missing previews remain typographic, to avoid fabricated portfolio visuals.
+- Keep project image URLs in the portfolio records and preserve whole real screenshots in featured images; this keeps the public gallery and admin content consistent without inventing product UI.
 - Keep the original opening canvas sequence unchanged; selected home moments and public-page openings share `PortraitStage` with scene-specific video behind foreground content and a reduced-motion poster, so distinct motion stays readable without touching backend data or the private admin area.
 - Map home portrait scrub timing to the visible scene stage rather than the full data-list height, so movement settles before long section content ends and holds its final pose.
+
+## Admin content
+- Admin editors are driven by `src/lib/admin-schema.ts` field maps matching live DB keys; saves send the full array as `{ data: [...] }` because RevDB PUT rejects bare arrays.

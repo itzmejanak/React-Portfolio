@@ -14,3 +14,9 @@
 - [x] Final cross-screen presentation pass: phone, tablet, laptop and desktop layouts, navigation, content rows, touch controls and reduced-motion views
 - [x] Audit and polish visible UI alignment, section spacing, portrait scrolling and navigation across screens
 - [x] Verify the polished site and sync it to the deployed GitHub repository
+
+- [x] Admin content manager with forms + optional JSON, project featured flag
+- [x] What I bring: faded tech-stack icon field filling desktop space, polished on phone/tablet
+- [x] Replace Katha's featured slot with ForgeKit from the real release and supplied screenshots; verify phone and desktop presentation
+- [x] Put Katha first in the archive beneath featured work
+- [x] Collect real DNSHero repository screenshots and create its featured project image

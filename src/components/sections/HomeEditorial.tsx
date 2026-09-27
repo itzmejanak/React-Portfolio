@@ -50,7 +50,7 @@ function AboutChapter() {
 
 function ProjectVisual({ project }: { project: Project }) {
   const image = project.image || (project.slug === "katha" ? kathaPreview : undefined);
-  return <div className="project-visual">{image ? <img src={image} alt={`${project.title} project preview`} loading="lazy" /> : <div className="project-type-art"><span className="project-art-mark">{project.category}</span><strong>{project.title}</strong><span className="project-art-index">{String(project.id).padStart(2, "0")} / WORK</span></div>}<span className="project-visual-shade" /></div>;
+  return <div className={`project-visual ${["forgekit", "dnshero"].includes(project.slug) ? "project-visual-contain" : ""}`}>{image ? <img src={image} alt={`${project.title} project preview`} loading="lazy" /> : <div className="project-type-art"><span className="project-art-mark">{project.category}</span><strong>{project.title}</strong><span className="project-art-index">{String(project.id).padStart(2, "0")} / WORK</span></div>}<span className="project-visual-shade" /></div>;
 }
 
 function WorkChapter() {

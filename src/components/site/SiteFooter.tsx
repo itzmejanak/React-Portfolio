@@ -12,8 +12,8 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border">
-       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
-        <div>
+       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-4 py-12 sm:px-6 lg:grid-cols-3">
+        <div className="col-span-2 max-lg:mb-1 lg:col-span-1">
           <p className="font-display font-bold text-foreground">
             JANAK<span className="text-ember">.</span>DEVKOTA
           </p>
@@ -47,7 +47,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-       <div className="mx-auto flex max-w-6xl flex-col justify-between gap-2 border-t border-border px-4 py-6 font-mono text-[11px] text-muted-foreground sm:px-6 lg:flex-row">
+       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-border px-4 py-6 font-mono text-[11px] text-muted-foreground sm:px-6">
         <span>© {new Date().getFullYear()} {profile?.name ?? "Janak Devkota"}</span>
          <span className="flex flex-wrap gap-x-4 gap-y-2">
           <span>{profile?.location}</span>

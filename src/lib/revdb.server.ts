@@ -51,7 +51,7 @@ export async function rdAppend(db: string, name: string, record: RevRecord) {
 export async function rdReplace(db: string, name: string, records: RevRecord[]) {
   const r = await call(`/collections/${encodeURIComponent(name)}?db=${encodeURIComponent(db)}`, {
     method: "PUT",
-    body: JSON.stringify(records),
+    body: JSON.stringify({ data: records }),
   });
   if (!r.ok) throw new Error(`Backend error ${r.status}`);
 }
