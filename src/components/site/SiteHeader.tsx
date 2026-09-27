@@ -17,7 +17,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/70 backdrop-blur-md">
-      <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 sm:px-6 xl:max-w-7xl">
+      <div className="mx-auto grid h-16 max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 sm:px-6">
         <Link to="/" className="min-w-0 truncate font-display text-lg font-bold text-foreground">
           JANAK<span className="text-ember">.</span>DEVKOTA
         </Link>
@@ -28,6 +28,7 @@ export function SiteHeader() {
               key={link.label}
               to={link.to}
               {...("hash" in link ? { hash: link.hash } : {})}
+              {...(!("hash" in link) ? { activeProps: { className: "text-ember" } } : {})}
               className="px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
@@ -64,7 +65,8 @@ export function SiteHeader() {
               to={link.to}
               {...("hash" in link ? { hash: link.hash } : {})}
               onClick={() => setOpen(false)}
-              className="block py-3 text-muted-foreground transition-colors hover:text-foreground"
+               {...(!("hash" in link) ? { activeProps: { className: "text-ember" } } : {})}
+               className="block py-3 text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>

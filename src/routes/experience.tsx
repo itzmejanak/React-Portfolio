@@ -35,7 +35,7 @@ function ExperiencePage() {
         <ExperienceTimeline />
       </section>
       {p ? (
-        <section className="mx-auto max-w-6xl px-6 py-10">
+         <section className="mx-auto max-w-6xl px-6 py-16">
           <SectionHeading index="02" title="Education" />
            <Reveal className="border-t border-edge py-8">
             <p className="font-display text-xl font-semibold text-foreground">{p.education}</p>

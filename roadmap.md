@@ -12,3 +12,5 @@
 - [x] Replace repeated portrait banners with selected live scenes behind content; check desktop/mobile, interaction, and reduced motion
 - [x] Refine home Work, What I Bring, Services, and Contact layout; portrait motion settles before content ends; verify desktop, phone, focus and reduced motion
 - [x] Final cross-screen presentation pass: phone, tablet, laptop and desktop layouts, navigation, content rows, touch controls and reduced-motion views
+- [ ] Audit and polish visible UI alignment, section spacing, portrait scrolling and navigation across screens
+- [ ] Verify the polished site and sync it to the deployed GitHub repository

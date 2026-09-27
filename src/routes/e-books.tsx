@@ -28,16 +28,16 @@ function EBooksPage() {
   return (
     <>
       <PageBanner eyebrow={`Library — ${books.length} titles`} title="Free e-books & PDFs" description="Guides on Linux, programming and development — all free to download." scene="books" />
-    <section className="mx-auto max-w-6xl px-6 py-16">
+    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       {isLoading ? <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{[0,1,2,3,4,5].map((i) => <Skeleton key={i} className="h-60" />)}</div> : null}
       <Stagger className="editorial-index grid gap-x-12 md:grid-cols-2">
         {books.map((book, index) => (
-          <StaggerItem key={book.itemName} className="editorial-index-item flex gap-5 py-6">
+          <StaggerItem key={book.itemName} className="editorial-index-item flex min-w-0 gap-4 py-6 sm:gap-5">
             <img
               src={book.imgSrc}
               alt={book.altText ?? book.itemName}
               loading="lazy"
-              className="h-32 w-24 shrink-0 bg-background object-cover"
+              className="h-32 w-24 shrink-0 bg-background object-contain"
             />
             <div className="min-w-0"><span className="font-mono text-[10px] text-ember">{String(index + 1).padStart(2, "0")}</span>
               {book.discount ? (

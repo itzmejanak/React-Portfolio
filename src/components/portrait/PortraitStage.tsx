@@ -53,11 +53,10 @@ export function PortraitStage({ scene, mode = "entry" }: { scene: PortraitScene;
     const update = () => {
       if (!visible || mode !== "scroll" || !Number.isFinite(video.duration)) return;
       const bounds = container.getBoundingClientRect();
-       // Settle the portrait before the section ends, then hold its last frame.
-       // The scene is decorative; long project lists should not delay the motion.
+       // Settle the portrait within the visible scene, not the full project list.
        const progress = Math.max(0, Math.min(1, (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height * 0.58)));
       const time = progress * Math.max(0, video.duration - 0.05);
-      if (Math.abs(video.currentTime - time) > 0.08) video.currentTime = time;
+       if (Math.abs(video.currentTime - time) > 0.035) video.currentTime = time;
     };
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(() => { frame = 0; update(); }); };
     observer.observe(container);
