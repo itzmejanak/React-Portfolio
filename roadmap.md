@@ -1,0 +1,14 @@
+# Roadmap
+- [x] Rebuild with Tailwind v4 + Ember Machined design
+- [x] Scroll-linked portrait hero
+- [x] Resume synced into backend; all content loaded from backend
+- [x] Contact form saved to backend
+- [x] Animated pages: home, experience, project detail, apps, e-books
+- [x] Admin (footer link): first-admin setup, login, message inbox, content viewer
+- [x] Redesign only home sections beneath portrait as kinetic editorial chapters; preserve API content, form and inner pages
+- [x] Verify desktop, mobile, links, filters, validation state and reduced motion; untouched inner pages still render
+- [x] Carry a coherent portrait journey through every home chapter and public inner-page opening; keep original hero
+- [x] Simplify inner-page content presentation, preserve API content and working interactions, verify desktop/mobile/reduced motion
+- [x] Replace repeated portrait banners with selected live scenes behind content; check desktop/mobile, interaction, and reduced motion
+- [x] Refine home Work, What I Bring, Services, and Contact layout; portrait motion settles before content ends; verify desktop, phone, focus and reduced motion
+- [x] Final cross-screen presentation pass: phone, tablet, laptop and desktop layouts, navigation, content rows, touch controls and reduced-motion views
