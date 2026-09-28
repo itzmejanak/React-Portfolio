@@ -20,3 +20,4 @@
 - [x] Replace Katha's featured slot with ForgeKit from the real release and supplied screenshots; verify phone and desktop presentation
 - [x] Put Katha first in the archive beneath featured work
 - [x] Collect real DNSHero repository screenshots and create its featured project image
+- [x] Tablet-first visual polish; verify public pages across phone, tablet and desktop; push after screenshots pass
