@@ -57,7 +57,7 @@ function ProjectView({ project, next }: { project: Project; next: Project | unde
             initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-4 font-display text-6xl font-bold tracking-tight text-foreground md:text-8xl"
+            className="mt-4 max-w-full font-display text-5xl font-bold tracking-tight text-foreground break-words sm:text-6xl lg:text-8xl"
           >
             {project.title}
           </motion.h1>
@@ -76,8 +76,8 @@ function ProjectView({ project, next }: { project: Project; next: Project | unde
       </div>
 
       {project.image && <div className="mx-auto max-w-6xl px-6 pt-16"><img src={project.image} alt={`${project.title} project preview`} className="w-full object-contain" loading="lazy" /></div>}
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-        <div className="md:col-span-8">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-12">
+        <div className="lg:col-span-8">
           <SectionHeading index="01" title="Highlights" />
            <Stagger className="border-t border-edge">
             {project.points?.map((pt, i) => (
@@ -88,8 +88,8 @@ function ProjectView({ project, next }: { project: Project; next: Project | unde
             ))}
           </Stagger>
         </div>
-        <Reveal delay={0.1} className="md:col-span-4">
-           <div className="sticky top-24 border-t border-edge py-6">
+        <Reveal delay={0.1} className="lg:col-span-4">
+           <div className="border-t border-edge py-6 lg:sticky lg:top-24">
             <p className="font-mono text-[10px] uppercase tracking-wider text-ember">Stack</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack?.map((s) => (

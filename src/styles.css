@@ -280,8 +280,8 @@
 .send-button { height: 3.5rem; padding-inline: 2rem; border-radius: 0; background: var(--background); color: var(--foreground); font: 600 .85rem var(--font-display-family); text-transform: uppercase; }
 .send-button:hover { background: var(--panel); }
 .form-footer p { font: .72rem var(--font-mono-family); }
-@media (max-width: 800px) {
- .home-wrap { width: min(100% - 2rem, 1320px); }
+@media (max-width: 1023px) {
+ .home-wrap { width: min(100% - 3rem, 1320px); }
  .home-chapter { padding: 5rem 0; }
  .chapter-head { gap: 1rem; margin-bottom: 4rem; }
  .chapter-caption { max-width: 10ch; }
@@ -296,8 +296,11 @@
  .project-visual { height: clamp(250px, 48vw, 430px); }
  .project-meta h3 { font-size: 1.7rem; }
  .project-meta p { font-size: .85rem; }
- .archive-row { grid-template-columns: 2rem 1fr 1.5rem; }
+ .archive-row { grid-template-columns: 2rem minmax(0,1fr) 1.5rem; }
  .archive-category { display: none; }
+}
+@media (max-width: 700px) {
+ .home-wrap { width: min(100% - 2rem, 1320px); }
 }
 @media (max-width: 600px) {
  .about-title, .work-heading h2, .contact-heading h2 { font-size: clamp(3.2rem, 15vw, 5rem); }
@@ -393,7 +396,7 @@
   .inner-intro-content h1, .inner-intro-content p:not(:first-child), .project-intro-content h1, .project-intro-content p { max-width: 56%; }
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 1023px) {
   .about-layout, .chapter-split, .services-band, .contact-layout { gap: 2.5rem; }
   .editorial-form .form-pair { grid-template-columns: 1fr; gap: 2rem; }
   .capability-chapter .chapter-title { max-width: none; }
@@ -441,7 +444,7 @@
 .stack-field li span { font: .55rem var(--font-mono-family); text-transform: uppercase; letter-spacing: .08em; text-align: center; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .stack-field li:hover { opacity: 1; color: var(--ember); transform: translateY(-2px); }
 .stack-marquee { display: none; }
-@media (max-width: 800px) {
+@media (max-width: 1023px) {
   .capability-intro { position: static; min-height: 0; display: block; }
   .stack-field { display: none; }
   .stack-marquee { display: block; margin-top: 2rem; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); }
