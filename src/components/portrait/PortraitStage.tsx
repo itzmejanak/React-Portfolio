@@ -7,23 +7,23 @@ import contactPoster from "@/assets/scenes/contact-start.jpg";
 import appsPoster from "@/assets/scenes/apps-start.jpg";
 import booksPoster from "@/assets/scenes/books-start.jpg";
 import projectPoster from "@/assets/scenes/project-start.jpg";
-import aboutVideo from "@/assets/scenes/about.webm.asset.json";
-import workVideo from "@/assets/scenes/work.webm.asset.json";
-import experienceVideo from "@/assets/scenes/experience.webm.asset.json";
-import contactVideo from "@/assets/scenes/contact.webm.asset.json";
-import appsVideo from "@/assets/scenes/apps.webm.asset.json";
-import booksVideo from "@/assets/scenes/books.webm.asset.json";
-import projectVideo from "@/assets/scenes/project.webm.asset.json";
+import aboutVideo from "@/assets/scenes/about.webm";
+import workVideo from "@/assets/scenes/work.webm";
+import experienceVideo from "@/assets/scenes/experience.webm";
+import contactVideo from "@/assets/scenes/contact.webm";
+import appsVideo from "@/assets/scenes/apps.webm";
+import booksVideo from "@/assets/scenes/books.webm";
+import projectVideo from "@/assets/scenes/project.webm";
 
 export type PortraitScene = "about" | "work" | "experience" | "contact" | "apps" | "books" | "project";
 const scenes = {
-  about: { poster: aboutPoster, video: aboutVideo.url },
-  work: { poster: workPoster, video: workVideo.url },
-  experience: { poster: experiencePoster, video: experienceVideo.url },
-  contact: { poster: contactPoster, video: contactVideo.url },
-  apps: { poster: appsPoster, video: appsVideo.url },
-  books: { poster: booksPoster, video: booksVideo.url },
-  project: { poster: projectPoster, video: projectVideo.url },
+  about: { poster: aboutPoster, video: aboutVideo },
+  work: { poster: workPoster, video: workVideo },
+  experience: { poster: experiencePoster, video: experienceVideo },
+  contact: { poster: contactPoster, video: contactVideo },
+  apps: { poster: appsPoster, video: appsVideo },
+  books: { poster: booksPoster, video: booksVideo },
+  project: { poster: projectPoster, video: projectVideo },
 };
 
 /** Decorative video sits behind the content. Home scenes follow scroll; page scenes play once on entry. */

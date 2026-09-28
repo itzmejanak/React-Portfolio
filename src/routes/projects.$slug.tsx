@@ -1,3 +1,4 @@
+import { projectImage } from "@/lib/project-images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
@@ -75,7 +76,7 @@ function ProjectView({ project, next }: { project: Project; next: Project | unde
         </div>
       </div>
 
-      {project.image && <div className="mx-auto max-w-6xl px-6 pt-16"><img src={project.image} alt={`${project.title} project preview`} className="w-full object-contain" loading="lazy" /></div>}
+      {projectImage(project.slug, project.image) && <div className="mx-auto max-w-6xl px-6 pt-16"><img src={projectImage(project.slug, project.image)} alt={`${project.title} project preview`} className="w-full object-contain" loading="lazy" /></div>}
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-12">
         <div className="lg:col-span-8">
           <SectionHeading index="01" title="Highlights" />

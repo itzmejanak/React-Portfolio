@@ -1,3 +1,4 @@
+import { projectImage } from "@/lib/project-images";
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
@@ -7,8 +8,9 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Skeleton } from "@/components/motion/Reveal";
 
 export function ProjectCover({ project, className = "" }: { project: Project; className?: string }) {
-  if (project.image) {
-    return <img src={project.image} alt={project.title} loading="lazy" className={`w-full object-cover ${className}`} />;
+  const img = projectImage(project.slug, project.image);
+  if (img) {
+    return <img src={img} alt={project.title} loading="lazy" className={`w-full object-cover ${className}`} />;
   }
   return (
     <div className={`relative flex w-full items-end overflow-hidden bg-panel p-5 ${className}`}>
