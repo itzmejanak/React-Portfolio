@@ -1,14 +1,40 @@
 import { queryOptions } from "@tanstack/react-query";
 import { getCollection, type PUBLIC_COLLECTIONS } from "./revdb.functions";
+import fallbackData from "./portfolio-fallback.json";
 
 export type Collection = (typeof PUBLIC_COLLECTIONS)[number];
 
+function sanitizeValue<T>(val: T): T {
+  if (typeof val === "string") {
+    return val.replace(/^`\s*/, "").replace(/Analysise\b/g, "Analysis") as unknown as T;
+  }
+  if (Array.isArray(val)) {
+    return val.map(sanitizeValue) as unknown as T;
+  }
+  if (val && typeof val === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(val)) {
+      out[k] = sanitizeValue(v);
+    }
+    return out as T;
+  }
+  return val;
+}
+
+export function getInitialCollection<T = Record<string, unknown>>(name: Collection): T[] {
+  const raw = (fallbackData as Record<string, unknown>)[name];
+  return Array.isArray(raw) ? sanitizeValue(raw as T[]) : [];
+}
+
 export function collectionQuery<T = Record<string, unknown>>(name: Collection) {
+  const initial = getInitialCollection<T>(name);
   return queryOptions({
     queryKey: ["portfolio", name],
-    queryFn: async () => (await getCollection({ data: { name } })) as T[],
+    queryFn: async () => sanitizeValue((await getCollection({ data: { name } })) as T[]),
+    initialData: initial.length > 0 ? initial : undefined,
+    initialDataUpdatedAt: 0,
     staleTime: 5 * 60 * 1000,
-    retry: 2,
+    retry: 1,
   });
 }
 
