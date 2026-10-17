@@ -2,6 +2,7 @@ import { projectImage } from "@/lib/project-images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 import { collectionQuery, type Project } from "@/lib/portfolio";
 import { Reveal, Skeleton, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -68,8 +69,9 @@ function ProjectView({ project, next }: { project: Project; next: Project | unde
           <div className="mt-8 flex flex-wrap gap-3">
             {project.links?.map((l, i) => (
                <a key={l.url} href={l.url} target="_blank" rel="noreferrer"
-                 className={i === 0 ? "bg-ember px-5 py-3 font-display font-semibold text-primary-foreground hover:bg-ember/90" : "border border-edge px-5 py-3 font-display font-semibold text-foreground hover:border-ember/50"}>
-                {l.label} ↗
+                 className={i === 0 ? "inline-flex items-center gap-2 bg-ember px-5 py-3 font-display font-semibold text-primary-foreground hover:bg-ember/90" : "inline-flex items-center gap-2 border border-edge px-5 py-3 font-display font-semibold text-foreground hover:border-ember/50"}>
+                <span>{l.label}</span>
+                <ArrowUpRight size={15} aria-hidden="true" />
               </a>
             ))}
           </div>

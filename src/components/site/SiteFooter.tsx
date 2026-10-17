@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
+import { ArrowUp } from "lucide-react";
 import { collectionQuery, type Profile, type SocialHandle } from "@/lib/portfolio";
 import { Icon } from "@/lib/icons";
 
@@ -91,9 +92,10 @@ export function SiteFooter() {
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className=" uppercase tracking-wider transition-colors hover:text-ember"
+            className="inline-flex items-center gap-1 uppercase tracking-wider transition-colors hover:text-ember"
           >
-            Back to top ↑
+            <span>Back to top</span>
+            <ArrowUp size={12} aria-hidden="true" />
           </button>
           <Link to="/admin" className="uppercase tracking-wider transition-colors hover:text-ember">
             Admin

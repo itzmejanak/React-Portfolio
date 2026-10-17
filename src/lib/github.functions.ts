@@ -92,6 +92,15 @@ type RawGithubRepo = {
   topics?: string[];
 };
 
+function cleanDescription(desc: string | null | undefined): string | null {
+  if (!desc) return null;
+  const cleaned = desc
+    .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}]/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return cleaned || null;
+}
+
 function formatRepos(repos: RawGithubRepo[]): GithubRepo[] {
   const excluded = new Set([GITHUB_USER.toLowerCase(), "react-portfolio"]);
   return repos
@@ -101,12 +110,16 @@ function formatRepos(repos: RawGithubRepo[]): GithubRepo[] {
       const fallbackMatch = FALLBACK_GITHUB_REPOS.find(
         (f) => f.name.toLowerCase() === repo.name.toLowerCase(),
       );
+      const rawDesc = cleanDescription(repo.description);
+      const description =
+        fallbackMatch?.description ??
+        (rawDesc && rawDesc.length >= 24 ? rawDesc : (fallbackMatch?.description ?? rawDesc));
       return {
         name: repo.name,
-        description: repo.description || fallbackMatch?.description || null,
+        description: description || null,
         url: repo.html_url,
         language: repo.language || fallbackMatch?.language || null,
-        stars: repo.stargazers_count,
+        stars: Math.max(repo.stargazers_count, fallbackMatch?.stars ?? 0),
         updatedAt: repo.pushed_at,
         topics: repo.topics?.length ? repo.topics : (fallbackMatch?.topics ?? []),
       };

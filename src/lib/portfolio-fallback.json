@@ -134,48 +134,48 @@
   ],
   "whyChooseMe": [
     {
-      "title": "Unmatched Local Expertise",
+      "title": "End-to-End Ownership",
       "icon": "<GrUserExpert/>",
       "link": "",
       "id": "whyChooseMe_1754164749449_9lfsz4je0"
     },
     {
-      "title": "Comprehensive Market Analysis",
+      "title": "Resilient Distributed Systems",
       "icon": "<IoMdAnalytics/>",
       "link": "",
       "id": "whyChooseMe_1754164749449_luwdnnccs"
     },
     {
-      "title": "Dedicated Client Support",
-      "icon": "<MdOutlineSupportAgent/>",
-      "link": "",
-      "id": "whyChooseMe_1754164749449_u1zz02mk8"
-    },
-    {
-      "title": "Innovative Marketing Strategies",
+      "title": "Cross-Platform Execution",
       "icon": "<RiExchange2Fill/>",
       "link": "",
       "id": "whyChooseMe_1754164749449_4kivw2hj0"
+    },
+    {
+      "title": "Security & Performance First",
+      "icon": "<MdOutlineSupportAgent/>",
+      "link": "",
+      "id": "whyChooseMe_1754164749449_u1zz02mk8"
     }
   ],
   "services": [
     {
-      "name": "UI/UX Design",
-      "icon": "<FaPaintBrush/>",
-      "description": "Design intuitive interfaces and captivating visuals to elevate digital experiences. Leverage creativity and skill to enhance user engagement",
-      "id": "service_1754164749449_eu47omtuv"
-    },
-    {
-      "name": "Web Development",
+      "name": "Full-Stack Web Platforms",
       "icon": "<FaLaptopCode/>",
-      "description": "Utilize front-end and back-end expertise to create complete web solutions. Focus on ensuring a smooth and seamless user experience by integrating both design and functionality for a cohesive and efficient digital presence.",
+      "description": "End-to-end web applications engineered with Next.js, React, and TypeScript—backed by PostgreSQL, MySQL, or MongoDB and tuned for speed, accessibility, and SEO.",
       "id": "service_1754164749449_9zygy9ha9"
     },
     {
-      "name": "Content Creation",
+      "name": "Backend APIs & IoT Systems",
       "icon": "<TfiWrite/>",
-      "description": "Employ both creativity and strategy in content creation to craft compelling and engaging material. Focus on producing high-quality content that resonates with the audience",
+      "description": "High-concurrency REST and real-time services built with FastAPI, Django, and Spring Boot, integrated with MQTT brokers, RabbitMQ, Redis caching, and mTLS security.",
       "id": "service_1754164749449_uwtkphe18"
+    },
+    {
+      "name": "Mobile & Desktop Applications",
+      "icon": "<FaPaintBrush/>",
+      "description": "Cross-platform mobile apps in React Native (Expo), native Android software in Kotlin and Jetpack Compose, and lightweight desktop tools in Rust/Tauri and .NET/WPF.",
+      "id": "service_1754164749449_eu47omtuv"
     }
   ],
   "skills": [

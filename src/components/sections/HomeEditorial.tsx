@@ -283,7 +283,8 @@ function WorkChapter() {
                     rel="noreferrer"
                     className="project-ext-link"
                   >
-                    {project.links[0].label} ↗
+                    <span>{project.links[0].label}</span>
+                    <ArrowUpRight size={13} aria-hidden="true" />
                   </a>
                 ) : null}
               </div>
@@ -390,14 +391,52 @@ function ExperienceChapter() {
   );
 }
 
+const ENGINEERING_APPROACH: { title: string; subtitle: string; icon: string }[] = [
+  {
+    title: "End-to-End Ownership",
+    subtitle: "System architecture, frontend interfaces, backend APIs, and production deployment.",
+    icon: "<GrUserExpert/>",
+  },
+  {
+    title: "Resilient Distributed Systems",
+    subtitle: "High-availability services with FastAPI, Django, Spring Boot, Redis, and RabbitMQ.",
+    icon: "<IoMdAnalytics/>",
+  },
+  {
+    title: "Cross-Platform Execution",
+    subtitle: "Web apps in Next.js, mobile in React Native & Kotlin, and desktop in Tauri & .NET.",
+    icon: "<RiExchange2Fill/>",
+  },
+  {
+    title: "Security & Performance First",
+    subtitle: "Zero-trust mTLS device auth, sub-second caching, and containerized CI/CD pipelines.",
+    icon: "<MdOutlineSupportAgent/>",
+  },
+];
+
+const TEMPLATE_APPROACH_RE =
+  /unmatched local expertise|comprehensive market analysis|dedicated client support|innovative marketing strategies/i;
+
 function ApproachChapter() {
-  const { data: items = [] } = useQuery(collectionQuery<WhyChooseMe>("whyChooseMe"));
+  const { data: rawItems = [] } = useQuery(collectionQuery<WhyChooseMe>("whyChooseMe"));
+  const customItems = rawItems.filter(
+    (item) => item.title?.trim() && !TEMPLATE_APPROACH_RE.test(item.title),
+  );
+  const items =
+    customItems.length > 0
+      ? customItems.map((item) => ({
+          title: item.title,
+          subtitle: "",
+          icon: item.icon,
+        }))
+      : ENGINEERING_APPROACH;
+
   return (
-    <section className="home-chapter approach-chapter">
+    <section id="approach" className="home-chapter approach-chapter">
       <div className="home-wrap">
-        <Chapter number="04" title="Approach" aside="Why choose me" />
+        <Chapter number="04" title="Approach" aside="Engineering principles" />
         <Entrance className="approach-intro">
-          <p className="section-overline">WHY CHOOSE ME</p>
+          <p className="section-overline">HOW I ENGINEER</p>
           <h2 className="chapter-title">
             Good work is <em>intentional.</em>
           </h2>
@@ -406,7 +445,10 @@ function ApproachChapter() {
           {items.map((item, i) => (
             <Entrance key={item.title} className="approach-row" delay={i * 0.06}>
               <span className="row-index">{String(i + 1).padStart(2, "0")}</span>
-              <h3>{item.title}</h3>
+              <div>
+                <h3>{item.title}</h3>
+                {item.subtitle ? <p className="approach-desc">{item.subtitle}</p> : null}
+              </div>
               <Icon name={item.icon} size={24} className="text-ember" />
             </Entrance>
           ))}
@@ -416,9 +458,36 @@ function ApproachChapter() {
   );
 }
 
+const ENGINEERING_SERVICES: Service[] = [
+  {
+    name: "Full-Stack Web Platforms",
+    icon: "<FaLaptopCode/>",
+    description:
+      "End-to-end web applications engineered with Next.js, React, and TypeScript—backed by PostgreSQL, MySQL, or MongoDB and tuned for speed, accessibility, and SEO.",
+  },
+  {
+    name: "Backend APIs & IoT Systems",
+    icon: "<TfiWrite/>",
+    description:
+      "High-concurrency REST and real-time services built with FastAPI, Django, and Spring Boot, integrated with MQTT brokers, RabbitMQ, Redis caching, and mTLS security.",
+  },
+  {
+    name: "Mobile & Desktop Applications",
+    icon: "<FaPaintBrush/>",
+    description:
+      "Cross-platform mobile apps in React Native (Expo), native Android software in Kotlin and Jetpack Compose, and lightweight desktop tools in Rust/Tauri and .NET/WPF.",
+  },
+];
+
+const TEMPLATE_SERVICE_RE = /employ both creativity and strategy in content creation|elevate digital experiences/i;
+
 function CapabilityChapter() {
   const { data: groups = [] } = useQuery(collectionQuery<Skill>("skills"));
-  const { data: services = [] } = useQuery(collectionQuery<Service>("services"));
+  const { data: rawServices = [] } = useQuery(collectionQuery<Service>("services"));
+  const hasTemplateServices =
+    rawServices.length === 0 ||
+    rawServices.some((s) => TEMPLATE_SERVICE_RE.test(s.description ?? ""));
+  const services = hasTemplateServices ? ENGINEERING_SERVICES : rawServices;
 
   return (
     <section id="skill" className="home-chapter capability-chapter">

@@ -63,7 +63,7 @@ export function PortraitStage({ scene, mode = "entry" }: { scene: PortraitScene;
     };
 
     const onLoadedData = () => {
-      video.dataset.ready = "true";
+      video.dataset["ready"] = "true";
     };
 
     const update = () => {
