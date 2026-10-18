@@ -14,7 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ScrollProgress } from "@/components/motion/Reveal";
-import { motion } from "motion/react";
 import { useRouterState } from "@tanstack/react-router";
 
 function NotFoundComponent() {
@@ -120,22 +119,28 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const pathname = useRouterState({ select: (st) => st.location.pathname });
+  const location = useRouterState({ select: (st) => st.location });
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.replace(/^#/, "");
+    const el = document.getElementById(id);
+    if (el) {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, [location.pathname, location.hash]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen bg-background text-foreground">
         <ScrollProgress />
         <SiteHeader />
-        <motion.main
-          key={pathname}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
+        <main key={location.pathname}>
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
-        </motion.main>
+        </main>
         <SiteFooter />
       </div>
     </QueryClientProvider>
