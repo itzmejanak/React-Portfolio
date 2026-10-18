@@ -1,12 +1,17 @@
 import fallbackData from "./portfolio-fallback.json";
 
 const BASE = "https://rev-database-v2.vercel.app/api";
-const DEFAULT_PORTFOLIO_KEY = "bWRjM202MXVyZ3J4ZXBnOTdvbDoxNzUzMDQxNDQ3NzE1";
 const CACHE_TTL_MS = 60 * 1000;
 const memoryCache = new Map<string, { ts: number; data: unknown[] }>();
 
+function getApiKey(): string | undefined {
+  const key = process.env["REVDB_API_KEY"]?.trim();
+  return key || undefined;
+}
+
 function headers() {
-  const key = process.env["REVDB_API_KEY"] || DEFAULT_PORTFOLIO_KEY;
+  const key = getApiKey();
+  if (!key) throw new Error("Backend key is not configured");
   return { "x-api-key": key, "content-type": "application/json", accept: "application/json" };
 }
 
@@ -41,6 +46,10 @@ async function call(path: string, init: RequestInit = {}) {
 export type RevRecord = Record<string, unknown> & { id?: string };
 
 export async function rdList<T = RevRecord>(db: string, name: string): Promise<T[]> {
+  if (!getApiKey()) {
+    return getFallback<T>(db, name);
+  }
+
   const cacheKey = `${db}:${name}`;
   const cached = memoryCache.get(cacheKey);
   if (cached && Date.now() - cached.ts < CACHE_TTL_MS) {
